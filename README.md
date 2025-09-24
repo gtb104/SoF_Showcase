@@ -1,47 +1,25 @@
-# Spirit of Freedom Showcase Program
+# The Freedom Showcase program website
+This site is the Spirit of Freedom marching band's program for the Freedom Showcase.
 
-This is the Spirit of Freedom marching band's program guide.
+## Updating data
+TBD
 
-## Project Structure
+## Developing
+### Requirements
+- Node.js (v24)
+- Vercel CLI (v48)
 
-- `index.html`: Main HTML file
-- `css/styles.css`: CSS styles
-- `js/main.js`: JavaScript functionality
-- `vercel.json`: Vercel deployment configuration
+### Setup
+1. Install dependencies: `npm install`
+2. Start the development server: `npm run dev`
 
-## Local Development
+### Building
+To create a production version of your app: `npm run build`
 
-To preview the site locally, you can use any local server. For example:
+You can preview the production build with `npm run preview`
 
-```bash
-npx serve
-```
+### Deployment
+This may not be necessary because GitHub and Vercel have been linked in the Vercel Dashboard. If this repo is moved to a new maintainer, they will need to re-establish this connection to allow redeployments when code is pushed to GitHub.
 
-Or simply open the `index.html` file directly in your browser.
-
-## Deployment to Vercel
-
-To deploy this site to Vercel:
-
-1. Install Vercel CLI (if you haven't already):
-   ```bash
-   npm install -g vercel
-   ```
-
-2. Login to Vercel:
-   ```bash
-   vercel login
-   ```
-
-3. Deploy from the project directory:
-   ```bash
-   vercel
-   ```
-
-4. Follow the prompts to complete the deployment.
-
-Alternatively, you can deploy directly from the Vercel dashboard:
-1. Go to [vercel.com](https://vercel.com)
-2. Create a new project
-3. Import your repository or upload your files
-4. Deploy!
+1. Log into Vercel: `vercel login`
+2. Deploy: `vercel`
