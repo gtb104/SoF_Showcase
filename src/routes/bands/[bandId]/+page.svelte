@@ -1,5 +1,5 @@
 <script>
-  import { bandsStore } from '$lib/stores/index.js';
+  import { bandsStore, scheduleStore } from '$lib/stores/index.js';
 
   /** @type {import('./$types').PageData} */
   export let data;
@@ -9,9 +9,30 @@
 
   // Get band data from store
   let band;
+  let scheduleData = [];
+
   bandsStore.subscribe(bands => {
     band = bands.find(b => b.id === bandId);
   });
+
+  scheduleStore.subscribe(data => {
+    scheduleData = data;
+  });
+
+  // Helper function to get performance time by band ID
+  function getPerformanceTime(bandId) {
+    if (!bandId) return 'TBD';
+
+    // Look through all schedule groups and events
+    for (const group of scheduleData) {
+      for (const event of group.events) {
+        if (event.bandId === bandId) {
+          return event.time;
+        }
+      }
+    }
+    return 'TBD';
+  }
 </script>
 
 <svelte:head>
@@ -20,8 +41,8 @@
 
 {#if band}
   <div class="back-nav">
-    <a href="/bands">← All Bands</a>
-  </div>
+      <button on:click={() => history.back()} class="back-button">← Back</button>
+    </div>
 
   <div class="band-header">
     <div class="band-logo">
@@ -39,7 +60,7 @@
   <div class="performance-info">
     <div class="performance-time">
       <div class="label">Performance Time</div>
-      <div class="value">{band.performance}</div>
+      <div class="value">{getPerformanceTime(bandId)}</div>
     </div>
     <div class="production-name">
       <div class="label">Production</div>
@@ -55,12 +76,12 @@
         <div class="detail-value">{band.school}</div>
       </div>
       <div class="detail">
-        <div class="detail-label">Director</div>
-        <div class="detail-value">{band.director}</div>
+        <div class="detail-label">{band.directors.length > 1 ? 'Directors' : 'Director'}</div>
+        <div class="detail-value">{band.directors.join(', ')}</div>
       </div>
       <div class="detail">
-        <div class="detail-label">Drum Major</div>
-        <div class="detail-value">{band.drumMajor}</div>
+        <div class="detail-label">{band.drumMajors.length > 1 ? 'Drum Majors' : 'Drum Major'}</div>
+        <div class="detail-value">{band.drumMajors.join(', ')}</div>
       </div>
     </div>
   </div>
@@ -86,12 +107,15 @@
     margin-bottom: 1rem;
   }
 
-  .back-nav a {
+  .back-nav .back-button {
     color: var(--primary-color);
-    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0;
     font-size: 0.9rem;
     display: inline-flex;
     align-items: center;
+    cursor: pointer;
   }
 
   .band-header {

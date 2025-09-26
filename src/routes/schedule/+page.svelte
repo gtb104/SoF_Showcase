@@ -1,13 +1,18 @@
 <script>
-  import { scheduleStore, appState } from '$lib/stores/index.js';
+  import { scheduleStore, appState, bandsStore } from '$lib/stores/index.js';
 
   let scheduleData = [];
   let eventDate;
   let eventLocation;
+  let bands = [];
 
-  // Get schedule and event info from stores
+  // Get schedule, bands, and event info from stores
   scheduleStore.subscribe(data => {
     scheduleData = data;
+  });
+
+  bandsStore.subscribe(data => {
+    bands = data;
   });
 
   appState.subscribe(state => {
@@ -22,14 +27,12 @@
     year: 'numeric'
   });
 
-  // Group schedule by time blocks (morning, afternoon, evening)
-  $: morning = scheduleData.filter(item =>
-    item.time.includes("AM") || item.time === "12:00 PM"
-  );
-
-  $: afternoon = scheduleData.filter(item =>
-    item.time.includes("PM") && item.time !== "12:00 PM"
-  );
+  // Helper function to get a band's production name by ID
+  function getProductionName(bandId) {
+    if (!bandId) return null;
+    const band = bands.find(b => b.id === bandId);
+    return band ? band.productionName : null;
+  }
 </script>
 
 <svelte:head>
@@ -38,46 +41,29 @@
 
 <div class="schedule-page">
   <h1>Event Schedule</h1>
-  <p class="date-info">{formattedDate} • {eventLocation}</p>
+  <p class="event-date">{formattedDate} • {eventLocation || 'Freedom High School Stadium'}</p>
 
   <div class="timeline">
-    <h2>Morning</h2>
-    <div class="timeline-items">
-      {#each morning as item}
+    {#each scheduleData as item}
+      <h2>{item.group}</h2>
+      {#each item.events as event}
         <div class="timeline-item">
-          <div class="timeline-time">{item.time}</div>
+          <div class="timeline-time">{event.time}</div>
           <div class="timeline-content">
-            <h3>{item.event}</h3>
+            {#if event.bandId && getProductionName(event.bandId)}
+              <h3>{getProductionName(event.bandId)}</h3>
+            {/if}
             <p>
-              {#if item.bandId}
-                <a href="/bands/{item.bandId}" class="band-link">{item.description}</a>
+              {#if event.bandId}
+                <a href="/bands/{event.bandId}" class="band-link">{event.description}</a>
               {:else}
-                {item.description}
+                {event.description}
               {/if}
             </p>
           </div>
         </div>
       {/each}
-    </div>
-
-    <h2>Afternoon</h2>
-    <div class="timeline-items">
-      {#each afternoon as item}
-        <div class="timeline-item">
-          <div class="timeline-time">{item.time}</div>
-          <div class="timeline-content">
-            <h3>{item.event}</h3>
-            <p>
-              {#if item.bandId}
-                <a href="/bands/{item.bandId}" class="band-link">{item.description}</a>
-              {:else}
-                {item.description}
-              {/if}
-            </p>
-          </div>
-        </div>
-      {/each}
-    </div>
+    {/each}
   </div>
 
   <div class="schedule-notes">
@@ -109,13 +95,14 @@
     padding-bottom: 0.5rem;
   }
 
-  .date-info {
+  .event-date {
     color: #64748b;
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
   }
 
-  .timeline-items {
+  /* Timeline styling */
+  .timeline {
     display: flex;
     flex-direction: column;
     gap: 1rem;
