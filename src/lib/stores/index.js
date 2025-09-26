@@ -1,5 +1,10 @@
 import { writable } from 'svelte/store';
 
+// Store for application state
+export const appState = writable({
+  eventDate: new Date("November 1, 2025"),
+});
+
 // Store for bands data
 export const bandsStore = writable([
   {
@@ -617,7 +622,92 @@ export const adjudicatorsStore = writable([
   }
 ]);
 
-// Store for application state
-export const appState = writable({
-  eventDate: new Date("November 1, 2025"),
-});
+// Store for sponsors data
+export const sponsorsStore = writable([
+  {
+    level: "Platinum",
+    sponsors: [
+      {
+        name: "Chiron",
+        logo: "/images/sponsors/placeholder.png"
+      },
+      {
+        name: "NOVEC",
+        logo: "/images/sponsors/placeholder.png"
+      }
+    ]
+  },
+  {
+    level: "Gold",
+    sponsors: [
+      {
+        name: "Ourisman",
+        logo: "/images/sponsors/placeholder.png"
+      },
+      {
+        name: "Donna Chong, Realtor",
+        logo: "/images/sponsors/placeholder.png"
+      }
+    ]
+  },
+  {
+    level: "Silver",
+    sponsors: [
+      {
+        name: "Omar",
+        logo: "/images/sponsors/placeholder.png"
+      },
+      {
+        name: "Sterling Family",
+        logo: "/images/sponsors/placeholder.png"
+      },
+      {
+        name: "Iron Bear LLC",
+        logo: "/images/sponsors/placeholder.png"
+      }
+    ]
+  },
+  {
+    level: "Bronze",
+    sponsors: [
+      {
+        name: "Kravitz",
+        logo: "/images/sponsors/placeholder.png"
+      },
+      {
+        name: "Sheetz",
+        logo: "/images/sponsors/placeholder.png"
+      }
+    ]
+  },
+  {
+    level: "Band Supporters",
+    sponsors: [
+      {
+        name: "Scott Philben",
+        logo: "/images/sponsors/placeholder.png"
+      },
+      {
+        name: "sense of thai",
+        logo: "/images/sponsors/placeholder.png"
+      }
+    ]
+  },
+  {
+    level: "Freedom Showcase Sponsors",
+    sponsors: [
+      {
+        name: "Manhattan Pizza",
+        logo: "/images/sponsors/placeholder.png"
+      },
+      {
+        name: "Walmart",
+        logo: "/images/sponsors/placeholder.png"
+      },
+      {
+        name: "Texas Roadhouse",
+        logo: "/images/sponsors/placeholder.png"
+      }
+    ]
+  }
+]);

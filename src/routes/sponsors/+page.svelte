@@ -1,111 +1,11 @@
 <script>
-  // Sample sponsors data
-  const sponsors = [
-    {
-      level: "Platinum",
-      sponsors: [
-        {
-          name: "Johnson Music Company",
-          description: "Premier instruments and equipment for bands",
-          website: "https://example.com/johnson",
-          logo: "🎹"
-        },
-        {
-          name: "First Community Bank",
-          description: "Supporting our community since 1985",
-          website: "https://example.com/fcb",
-          logo: "🏦"
-        }
-      ]
-    },
-    {
-      level: "Gold",
-      sponsors: [
-        {
-          name: "Smith's Auto Group",
-          description: "Family owned dealership for 30 years",
-          website: "https://example.com/smithauto",
-          logo: "🚗"
-        },
-        {
-          name: "Freedom Pizza Co.",
-          description: "Official pizza provider of Freedom High School",
-          website: "https://example.com/freedompizza",
-          logo: "🍕"
-        },
-        {
-          name: "Harris Uniforms",
-          description: "Quality band uniforms and accessories",
-          website: "https://example.com/harrisuni",
-          logo: "👔"
-        }
-      ]
-    },
-    {
-      level: "Silver",
-      sponsors: [
-        {
-          name: "Parker Printing",
-          description: "Printing, signs, and banners",
-          website: "https://example.com/parker",
-          logo: "🖨️"
-        },
-        {
-          name: "Wilson Family Foundation",
-          description: "Supporting arts education in our schools",
-          website: "https://example.com/wilsonfoundation",
-          logo: "🎭"
-        },
-        {
-          name: "City View Hotel",
-          description: "Official hotel for visiting bands",
-          website: "https://example.com/cityview",
-          logo: "🏨"
-        },
-        {
-          name: "Tech Solutions Inc.",
-          description: "IT services and support",
-          website: "https://example.com/techsolutions",
-          logo: "💻"
-        }
-      ]
-    },
-    {
-      level: "Bronze",
-      sponsors: [
-        {
-          name: "Thompson's Trophies",
-          description: "Awards and recognition products",
-          website: "https://example.com/thompson",
-          logo: "🏆"
-        },
-        {
-          name: "Green Valley Landscaping",
-          description: "Proud supporter of Freedom High School",
-          website: "https://example.com/greenvalley",
-          logo: "🌳"
-        },
-        {
-          name: "Metro Dental Group",
-          description: "Family and cosmetic dentistry",
-          website: "https://example.com/metrodental",
-          logo: "🦷"
-        },
-        {
-          name: "Adams Insurance",
-          description: "Protecting what matters most",
-          website: "https://example.com/adamsinsurance",
-          logo: "🛡️"
-        },
-        {
-          name: "The Music Shop",
-          description: "Instruments, repairs, and lessons",
-          website: "https://example.com/musicshop",
-          logo: "🎸"
-        }
-      ]
-    }
-  ];
+  import { sponsorsStore } from '$lib/stores/index.js';
+
+  // Get sponsors data from the store
+  let sponsors = [];
+  sponsorsStore.subscribe(data => {
+    sponsors = data;
+  });
 </script>
 
 <svelte:head>
@@ -117,16 +17,28 @@
 
 {#each sponsors as tier}
   <section class="sponsor-tier">
-    <h2 class="tier-title">{tier.level} Sponsors</h2>
+    <h2 class="tier-title">{tier.level} {tier.level === "Band Supporters" || tier.level === "Freedom Showcase Sponsors" ? "" : "Sponsors"}</h2>
 
-    <div class="sponsors-grid tier-{tier.level.toLowerCase()}">
+    <div class="sponsors-grid tier-{tier.level.toLowerCase().replace(/\s+/g, '-')}">
       {#each tier.sponsors as sponsor}
         <div class="sponsor-card">
-          <div class="sponsor-logo">{sponsor.logo}</div>
+          {#if sponsor.logo}
+            <div class="sponsor-logo">
+              <img src={sponsor.logo} alt="{sponsor.name} logo" />
+            </div>
+          {:else}
+            <div class="sponsor-logo sponsor-placeholder">
+              {sponsor.name.charAt(0)}
+            </div>
+          {/if}
           <div class="sponsor-info">
             <h3>{sponsor.name}</h3>
-            <p>{sponsor.description}</p>
-            <a href={sponsor.website} target="_blank" rel="noopener noreferrer" class="website-link">Visit Website</a>
+            {#if sponsor.description}
+              <p>{sponsor.description}</p>
+            {/if}
+            {#if sponsor.website}
+              <a href={sponsor.website} target="_blank" rel="noopener noreferrer" class="website-link">Visit Website</a>
+            {/if}
           </div>
         </div>
       {/each}
@@ -174,7 +86,7 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .tier-gold, .tier-silver, .tier-bronze {
+  .tier-gold, .tier-silver, .tier-bronze, .tier-band-supporters, .tier-freedom-showcase-sponsors {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -185,6 +97,7 @@
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     transition: transform 0.2s, box-shadow 0.2s;
+    align-items: center;
   }
 
   /* Platinum sponsor styles */
@@ -207,18 +120,44 @@
     border-left: 4px solid #b45309; /* Bronze color */
   }
 
+  /* Band Supporters styles */
+  .tier-band-supporters .sponsor-card {
+    border-left: 4px solid #4ade80; /* Green color */
+  }
+
+  /* Freedom Showcase Sponsors styles */
+  .tier-freedom-showcase-sponsors .sponsor-card {
+    border-left: 4px solid #3b82f6; /* Blue color */
+  }
+
   .sponsor-card:hover, .sponsor-card:focus {
     transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
   .sponsor-logo {
-    font-size: 2rem;
     margin-right: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .sponsor-logo img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+
+  .sponsor-placeholder {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    background-color: #e2e8f0;
   }
 
   .sponsor-info {
@@ -289,17 +228,17 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    .tier-gold, .tier-silver {
+    .tier-gold, .tier-silver, .tier-band-supporters, .tier-freedom-showcase-sponsors {
       grid-template-columns: repeat(2, 1fr);
     }
 
     .tier-bronze {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   @media (min-width: 960px) {
-    .tier-gold, .tier-silver {
+    .tier-gold, .tier-silver, .tier-freedom-showcase-sponsors {
       grid-template-columns: repeat(3, 1fr);
     }
   }
