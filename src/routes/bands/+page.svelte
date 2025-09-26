@@ -4,20 +4,8 @@
   // Get bands from store
   let bands = [];
 
-  bandsStore.subscribe(bandsData => {
-    // Create a copy of the bands data
-    bands = [...bandsData];
-
-    // Sort bands by performance time
-    bands.sort((a, b) => {
-      // Convert times to 24-hour format for comparison
-      const timeA = a.performance.includes("PM") && !a.performance.startsWith("12") ?
-        parseInt(a.performance) + 12 : parseInt(a.performance);
-      const timeB = b.performance.includes("PM") && !b.performance.startsWith("12") ?
-        parseInt(b.performance) + 12 : parseInt(b.performance);
-
-      return timeA - timeB;
-    });
+  bandsStore.subscribe(data => {
+    bands = data;
   });
 </script>
 
