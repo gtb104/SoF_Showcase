@@ -31,7 +31,7 @@
   <p class="countdown">November 1<sup>st</sup></p>
 </section>
 
-<section class="info-section">
+<section class="card info-section">
   <h2>About the Event</h2>
   <p>
     Welcome to the <a href="https://www.vmbc-online.org/">Virginia Marching Band Cooperative</a> Freedom Showcase, an annual marching band competition hosted by the Freedom High School Marching Band. This event features performances from high school marching bands across the region competing for awards in music, visual presentation, and overall performance.
@@ -44,7 +44,7 @@
   </p>
 </section>
 
-<section class="pricing-section">
+<section class="card pricing-section">
   <h2>Admission</h2>
   <div class="price-cards">
     <div class="price-card">
@@ -66,7 +66,7 @@
   </p>
 </section>
 
-<section class="airgrams-section">
+<section class="card airgrams-section">
   <h2>AirGrams</h2>
   <p class="airgram-description">Send an over-the-loudspeaker shout out to your favorite marcher, director, or friend!</p>
 
@@ -88,7 +88,7 @@
   </div>
 </section>
 
-<section class="adjudicators-section">
+<section class="card adjudicators-section">
   <h2>Adjudicators</h2>
   <div class="adjudicators-grid">
     {#each adjudicators as adjudicator}
@@ -135,14 +135,16 @@
     font-weight: 500;
   }
 
-  /* Info section */
-  .info-section, .pricing-section {
+  /* Base styles */
+  .card {
     background-color: white;
     border-radius: 8px;
     padding: 0.5rem 1.5rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
+
+  /* Info section */
 
   .info-section p {
     margin-bottom: 1rem;
@@ -183,14 +185,6 @@
   }
 
   /* Adjudicators section */
-  .adjudicators-section {
-    background-color: white;
-    border-radius: 8px;
-    padding: 0.5rem 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
   .adjudicators-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -215,14 +209,6 @@
   }
 
   /* AirGrams section */
-  .airgrams-section {
-    background-color: white;
-    border-radius: 8px;
-    padding: 0.5rem 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  }
-
   .airgram-description {
     font-size: 1rem;
     margin-bottom: 1rem;

@@ -719,7 +719,7 @@ export const concessionsStore = writable({
       name: "Combo Deal",
       items: [
         {
-          name: "Pizza/Hot Dog/ Cup o'Noodles",
+          name: "Pizza/Hot Dog/Cup o'Noodles",
           price: "7.00",
           description: "Includes an entree, a drink (soda or water), and chips",
           icon: "🍽️"
