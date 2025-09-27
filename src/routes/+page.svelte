@@ -101,6 +101,32 @@
   <a href="https://0f15d2ba-85cb-4910-bef6-3cc6d22b8036.filesusr.com/ugd/ff63ab_0b6a1286897e4d4d8e81a02459d37213.pdf">How are groups judged?</a>
 </section>
 
+<section class="card code-of-conduct-section">
+  <h2>Code of Conduct</h2>
+  <div class="conduct-columns">
+    <div class="do-column">
+      <h3>Please Do</h3>
+      <ul class="conduct-list do-list">
+        <li>Cheer for all bands</li>
+        <li>Silence your phone</li>
+        <li>Send AirGrams to the participants</li>
+        <li>Visit Concessions</li>
+        <li>Support our Sponsors</li>
+        <li>Enjoy the day!</li>
+      </ul>
+    </div>
+    <div class="dont-column">
+      <h3>Please Don't</h3>
+      <ul class="conduct-list dont-list">
+        <li>Enter or leave during a performance</li>
+        <li>Obstruct others' view</li>
+        <li>Make negative comments (you never know who is within earshot)</li>
+        <li>Forget that everyone is doing their best to make this a great day for all!</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <style>
   /* Hero section */
   .hero {
@@ -242,6 +268,40 @@
     font-size: 0.9rem;
   }
 
+  /* Code of Conduct section */
+  .conduct-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .do-column h3, .dont-column h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .conduct-list {
+    margin: 0;
+    padding-left: 1.5rem;
+  }
+
+  .conduct-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .do-list li::marker {
+    color: #10b981; /* Green */
+  }
+
+  .dont-list li::marker {
+    color: #ef4444; /* Red */
+  }
+
   /* Responsive adjustments */
   @media (min-width: 768px) {
     .hero {
@@ -258,6 +318,10 @@
 
     .airgram-details {
       grid-template-columns: 1fr 2fr;
+    }
+
+    .conduct-columns {
+      grid-template-columns: 1fr 1fr;
     }
   }
 </style>
