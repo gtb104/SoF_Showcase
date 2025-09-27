@@ -1,47 +1,14 @@
 <script>
-  // Sample concessions data
-  const foodCategories = [
-    {
-      name: "Main Items",
-      items: [
-        { name: "Cheeseburger", price: "8.00", description: "1/4 lb beef patty with cheese", icon: "🍔" },
-        { name: "Hot Dog", price: "5.00", description: "All-beef hot dog", icon: "🌭" },
-        { name: "Chicken Tenders", price: "7.00", description: "3 pieces with sauce", icon: "🍗" },
-        { name: "Pizza Slice", price: "4.00", description: "Cheese or pepperoni", icon: "🍕" },
-        { name: "Nachos", price: "6.00", description: "Chips with cheese sauce", icon: "🧀" }
-      ]
-    },
-    {
-      name: "Sides",
-      items: [
-        { name: "French Fries", price: "4.00", description: "Regular size", icon: "🍟" },
-        { name: "Soft Pretzel", price: "4.50", description: "With cheese dip", icon: "🥨" },
-        { name: "Popcorn", price: "3.50", description: "Medium bag", icon: "🍿" },
-        { name: "Chips", price: "2.00", description: "Assorted varieties", icon: "🥔" }
-      ]
-    },
-    {
-      name: "Drinks",
-      items: [
-        { name: "Soda", price: "3.00", description: "Various flavors, 20oz", icon: "🥤" },
-        { name: "Bottled Water", price: "2.50", description: "16oz bottle", icon: "💧" },
-        { name: "Coffee", price: "3.00", description: "Hot or iced", icon: "☕" },
-        { name: "Hot Chocolate", price: "3.00", description: "With whipped cream", icon: "🍫" }
-      ]
-    },
-    {
-      name: "Desserts",
-      items: [
-        { name: "Cookies", price: "2.50", description: "Chocolate chip", icon: "🍪" },
-        { name: "Ice Cream", price: "4.00", description: "Cup or cone", icon: "🍦" },
-        { name: "Cotton Candy", price: "3.50", description: "Blue or pink", icon: "🍭" },
-        { name: "Funnel Cake", price: "6.00", description: "With powdered sugar", icon: "🍩" }
-      ]
-    }
-  ];
+  import { concessionsStore } from '$lib/stores/index.js';
 
-  // Payment methods accepted
-  const paymentMethods = ["Cash", "Credit Card", "Mobile Pay"];
+  // Get concessions data from the store
+  let foodCategories = [];
+  let paymentMethods = [];
+
+  concessionsStore.subscribe(data => {
+    foodCategories = data.categories;
+    paymentMethods = data.paymentMethods;
+  });
 </script>
 
 <svelte:head>
@@ -83,10 +50,10 @@
 <div class="concessions-info">
   <h2>Information</h2>
   <ul>
-    <li>Concession stands are located at the north and south ends of the stadium.</li>
+    <li>Concession stands are located near the stadium entrance.</li>
     <li>All proceeds support the Freedom High School Marching Band.</li>
     <li>Outside food and beverages are not permitted in the stadium.</li>
-    <li>Specialty dietary options available upon request.</li>
+    <li>Thank you for supporting the band program!</li>
   </ul>
 </div>
 
@@ -192,6 +159,7 @@
     border-radius: 8px;
     padding: 1.25rem;
     margin-top: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .concessions-info ul {

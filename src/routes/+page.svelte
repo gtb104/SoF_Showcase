@@ -66,6 +66,28 @@
   </p>
 </section>
 
+<section class="airgrams-section">
+  <h2>AirGrams</h2>
+  <p class="airgram-description">Send an over-the-loudspeaker shout out to your favorite marcher, director, or friend!</p>
+
+  <div class="airgram-details">
+    <div class="airgram-price">
+      <h3>Pricing</h3>
+      <p><span class="price">$3</span> per message</p>
+      <p><span class="price">$5</span> for 2 messages</p>
+    </div>
+
+    <div class="airgram-info">
+      <h3>How to Order</h3>
+      <ul>
+        <li>Visit the AirGrams table near the entrance of the stadium</li>
+        <li>Place your order at least 60 minutes before your preferred timing</li>
+        <li>Payment accepted: Cash, Credit Cards, Venmo and PayPal</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <section class="adjudicators-section">
   <h2>Adjudicators</h2>
   <div class="adjudicators-grid">
@@ -192,6 +214,48 @@
     color: var(--primary-color);
   }
 
+  /* AirGrams section */
+  .airgrams-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  .airgram-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #4a5568;
+  }
+
+  .airgram-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .airgram-price h3, .airgram-info h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .airgram-price p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+  }
+
+  .airgram-info ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .airgram-info li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+
   /* Responsive adjustments */
   @media (min-width: 768px) {
     .hero {
@@ -204,6 +268,10 @@
 
     .adjudicators-grid {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    .airgram-details {
+      grid-template-columns: 1fr 2fr;
     }
   }
 </style>
