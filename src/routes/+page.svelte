@@ -1,5 +1,5 @@
 <script>
-  import { appState, adjudicatorsStore, seniorsStore } from '$lib/stores/index.js';
+  import { appState, adjudicatorsStore, seniorsStore, boostersStore } from '$lib/stores/index.js';
 
   // Get app data
   let eventDate = '';
@@ -25,6 +25,16 @@
   let seniors = [];
   seniorsStore.subscribe(data => {
     seniors = data;
+  });
+
+  // Get boosters data
+  let boosters = {
+    executiveBoard: [],
+    showcaseCoordinators: [],
+    specialThanks: ''
+  };
+  boostersStore.subscribe(data => {
+    boosters = data;
   });
 </script>
 
@@ -142,6 +152,35 @@
     {#each seniors as senior}
       <div class="senior-card">{senior}</div>
     {/each}
+  </div>
+</section>
+
+<section class="card boosters-section">
+  <h2>Freedom HS Band Boosters</h2>
+
+  <div class="boosters-content">
+    <div class="executive-board">
+      <h3>Executive Board</h3>
+      <ul class="board-list">
+        {#each boosters.executiveBoard as member}
+          <li><strong>{member.name}</strong> - {member.position}</li>
+        {/each}
+      </ul>
+    </div>
+
+    <div class="showcase-team">
+      <h3>Showcase Coordinators</h3>
+      <div class="coordinator-list">
+        {#each boosters.showcaseCoordinators as coordinator, i}
+          <span class="coordinator-name">{coordinator}{i < boosters.showcaseCoordinators.length - 1 ? ', ' : ''}</span>
+        {/each}
+      </div>
+    </div>
+  </div>
+
+  <div class="special-thanks">
+    <h3>Special Thanks</h3>
+    <p>Thanks to {boosters.specialThanks} for providing food for our hard-working volunteers!</p>
   </div>
 </section>
 
@@ -365,6 +404,60 @@
     background-color: #f0f8ff;
   }
 
+  /* Band Boosters section */
+  .boosters-section {
+    margin-top: 2rem;
+  }
+
+  .boosters-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .executive-board h3, .showcase-team h3, .special-thanks h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0 0 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .board-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .board-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    padding: 0.25rem 0;
+    border-bottom: 1px dashed #edf2f7;
+  }
+
+  .coordinator-list {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4a5568;
+  }
+
+  .coordinator-name {
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .special-thanks {
+    margin-top: 1rem;
+  }
+
+  .special-thanks p {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #4a5568;
+  }
+
   /* Responsive adjustments */
   @media (min-width: 576px) {
     .seniors-grid {
@@ -396,6 +489,11 @@
     .seniors-grid {
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
+    }
+
+    .boosters-content {
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
     }
   }
 </style>
