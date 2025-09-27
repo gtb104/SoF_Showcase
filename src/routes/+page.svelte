@@ -150,8 +150,6 @@
   <a href="https://0f15d2ba-85cb-4910-bef6-3cc6d22b8036.filesusr.com/ugd/ff63ab_0b6a1286897e4d4d8e81a02459d37213.pdf">How are groups judged?</a>
 </section>
 
-
-
 <section class="card seniors-section">
   <h2>Senior Class of {eventYear}</h2>
   <p class="senior-intro">We celebrate and honor the graduating seniors of the Spirit of Freedom Marching Band:</p>
@@ -187,7 +185,7 @@
 
   <div class="special-thanks">
     <h3>Special Thanks</h3>
-    <p>Thanks to {boosters.specialThanks} for providing food for our hard-working volunteers!</p>
+    <p>Thanks to {boosters.specialThanks || "our sponsors"} for providing food for our hard-working volunteers!</p>
   </div>
 </section>
 
@@ -242,12 +240,14 @@
   }
 
   /* Visitor information section */
-  .visitor-info-columns {
+  /* Common grid layout shared by multiple sections */
+  .visitor-info-columns, .boosters-content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
+  /* Common section heading styles used throughout the page */
   .visitor-info-section h3 {
     color: var(--primary-color);
     font-size: 1.25rem;
@@ -315,7 +315,8 @@
   }
 
   /* AirGrams section */
-  .airgram-description {
+  /* Common description text style shared by multiple sections */
+  .airgram-description, .senior-intro {
     font-size: 1rem;
     margin-bottom: 1rem;
     color: #4a5568;
@@ -324,7 +325,7 @@
   .airgram-details {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1.5rem; /* Slightly smaller gap than other grid layouts */
   }
 
   .airgram-price h3, .airgram-info h3 {
@@ -369,7 +370,7 @@
     padding-left: 1.5rem;
   }
 
-    .conduct-list li {
+  .conduct-list li {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
   }
@@ -390,12 +391,6 @@
     position: relative;
     overflow: hidden;
     border-top: 3px solid #ffd700;
-  }
-
-  .senior-intro {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #4a5568;
   }
 
   .seniors-grid {
@@ -433,13 +428,10 @@
   }
 
   .boosters-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Additional styling specific to boosters-content */
   }
 
-  .executive-board h3, .showcase-team h3, .special-thanks h3 {
+  .executive-board h3, .showcase-team h3, .special-thanks h3, .do-column h4, .dont-column h4 {
     color: var(--primary-color);
     font-size: 1.1rem;
     margin: 0 0 0.75rem;
@@ -501,13 +493,18 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
+    /* Grid layouts for desktop */
     .airgram-details {
       grid-template-columns: 1fr 2fr;
     }
 
-    .visitor-info-columns {
+    .visitor-info-columns, .boosters-content {
       grid-template-columns: 1fr 1fr;
       gap: 3rem;
+    }
+
+    .boosters-content {
+      align-items: start;
     }
 
     .conduct-grid {
@@ -517,11 +514,6 @@
     .seniors-grid {
       grid-template-columns: repeat(4, 1fr);
       gap: 1.5rem;
-    }
-
-    .boosters-content {
-      grid-template-columns: 1fr 1fr;
-      align-items: start;
     }
   }
 </style>
