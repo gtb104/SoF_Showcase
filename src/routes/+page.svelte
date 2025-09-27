@@ -1,8 +1,9 @@
 <script>
-  import { appState, adjudicatorsStore } from '$lib/stores/index.js';
+  import { appState, adjudicatorsStore, seniorsStore } from '$lib/stores/index.js';
 
   // Get app data
   let eventDate = '';
+  let eventYear = '';
   appState.subscribe(data => {
     if (data) {
       const dateFormatter = new Intl.DateTimeFormat('en-US', {
@@ -10,6 +11,7 @@
         day: 'numeric'
       });
       eventDate = dateFormatter.format(data.eventDate);
+      eventYear = new Date(data.eventDate).getFullYear();
     }
   });
 
@@ -17,6 +19,12 @@
   let adjudicators = [];
   adjudicatorsStore.subscribe(data => {
     adjudicators = data;
+  });
+
+  // Get seniors data
+  let seniors = [];
+  seniorsStore.subscribe(data => {
+    seniors = data;
   });
 </script>
 
@@ -124,6 +132,16 @@
         <li>Forget that everyone is doing their best to make this a great day for all!</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section class="card seniors-section">
+  <h2>Senior Class of {eventYear}</h2>
+  <p class="senior-intro">We celebrate and honor the graduating seniors of the Spirit of Freedom Marching Band:</p>
+  <div class="seniors-grid">
+    {#each seniors as senior}
+      <div class="senior-card">{senior}</div>
+    {/each}
   </div>
 </section>
 
@@ -289,20 +307,71 @@
     padding-left: 1.5rem;
   }
 
-  .conduct-list li {
+    .conduct-list li {
     margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 
   .do-list li::marker {
-    color: #10b981; /* Green */
+    color: #38A169;
+    content: "✓ ";
   }
 
   .dont-list li::marker {
-    color: #ef4444; /* Red */
+    color: #E53E3E;
+    content: "✗ ";
+  }
+
+  /* Senior Class section */
+  .seniors-section {
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid #ffd700;
+  }
+
+  .senior-intro {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #4a5568;
+  }
+
+  .seniors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .senior-card {
+    background-color: #f5f5f5;
+    padding: 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+    border-left: 3px solid #ffd700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    font-size: 0.95rem;
+  }
+
+  .senior-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f8ff;
   }
 
   /* Responsive adjustments */
+  @media (min-width: 576px) {
+    .seniors-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   @media (min-width: 768px) {
     .hero {
       padding: 3rem 1rem;
@@ -322,6 +391,11 @@
 
     .conduct-columns {
       grid-template-columns: 1fr 1fr;
+    }
+
+    .seniors-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
     }
   }
 </style>
