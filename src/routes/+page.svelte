@@ -58,30 +58,61 @@
     We have 24 bands competing today, and each performance is the result of countless hours of planning, practice, and hard work.
   </p>
   <p>
-    None of this would be possible without support from our sponsors and other local businesses, the South Riding community, and Freedom High School’s faculty and staff led by Band Director Jonathan Schiffler and Principal Tania N. Brown.  The FHS Band Boosters thanks every adult and student volunteer for their tireless work and dedication to our kids and our band programs.
+    None of this would be possible without support from our sponsors and other local businesses, the South Riding community, and Freedom High School’s faculty and staff led by Band Director <b>Jonathan Schiffler</b> and Principal <b>Tania N. Brown</b>.  The FHS Band Boosters thanks every adult and student volunteer for their tireless work and dedication to our kids and our band programs.
   </p>
 </section>
 
-<section class="card pricing-section">
-  <h2>Admission</h2>
-  <div class="price-cards">
-    <div class="price-card">
-      <h3>Adult (ages 12+)</h3>
-      <p class="price">$12</p>
+<section class="card visitor-info-section">
+  <h2>Visitor Information</h2>
+  <div class="visitor-info-columns">
+    <div class="admission-column">
+      <h3>Admission</h3>
+      <div class="price-cards">
+        <div class="price-card">
+          <h4>Adult (ages 12+)</h4>
+          <p class="price">$12</p>
+        </div>
+        <div class="price-card">
+          <h4>Seniors (ages 60+)</h4>
+          <p class="price">$6</p>
+        </div>
+        <div class="price-card">
+          <h4>Youth (ages 5-11)</h4>
+          <p class="price">$6</p>
+          <p class="price-note">Under 5 free</p>
+        </div>
+      </div>
+      <p class="price-note">
+        * All proceeds support the Freedom Marching Band
+      </p>
     </div>
-    <div class="price-card">
-      <h3>Seniors (ages 60+)</h3>
-      <p class="price">$6</p>
-    </div>
-    <div class="price-card">
-      <h3>Youth (ages 5-11)</h3>
-      <p class="price">$6</p>
-      <p class="price-note">Under 5 free</p>
+
+    <div class="conduct-column">
+      <h3>Code of Conduct</h3>
+      <div class="conduct-grid">
+        <div class="do-column">
+          <h4>Please Do</h4>
+          <ul class="conduct-list do-list">
+            <li>Cheer for all bands</li>
+            <li>Silence your phone</li>
+            <li>Send AirGrams to the participants</li>
+            <li>Visit Concessions</li>
+            <li>Support our Sponsors</li>
+            <li>Enjoy the day!</li>
+          </ul>
+        </div>
+        <div class="dont-column">
+          <h4>Please Don't</h4>
+          <ul class="conduct-list dont-list">
+            <li>Enter or leave during a performance</li>
+            <li>Obstruct others' view</li>
+            <li>Make negative comments (you never know who is within earshot)</li>
+            <li>Forget that everyone is doing their best to make this a great day for all!</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-  <p class="price-note">
-    * All proceeds support the Freedom Marching Band
-  </p>
 </section>
 
 <section class="card airgrams-section">
@@ -119,31 +150,7 @@
   <a href="https://0f15d2ba-85cb-4910-bef6-3cc6d22b8036.filesusr.com/ugd/ff63ab_0b6a1286897e4d4d8e81a02459d37213.pdf">How are groups judged?</a>
 </section>
 
-<section class="card code-of-conduct-section">
-  <h2>Code of Conduct</h2>
-  <div class="conduct-columns">
-    <div class="do-column">
-      <h3>Please Do</h3>
-      <ul class="conduct-list do-list">
-        <li>Cheer for all bands</li>
-        <li>Silence your phone</li>
-        <li>Send AirGrams to the participants</li>
-        <li>Visit Concessions</li>
-        <li>Support our Sponsors</li>
-        <li>Enjoy the day!</li>
-      </ul>
-    </div>
-    <div class="dont-column">
-      <h3>Please Don't</h3>
-      <ul class="conduct-list dont-list">
-        <li>Enter or leave during a performance</li>
-        <li>Obstruct others' view</li>
-        <li>Make negative comments (you never know who is within earshot)</li>
-        <li>Forget that everyone is doing their best to make this a great day for all!</li>
-      </ul>
-    </div>
-  </div>
-</section>
+
 
 <section class="card seniors-section">
   <h2>Senior Class of {eventYear}</h2>
@@ -234,7 +241,23 @@
     line-height: 1.6;
   }
 
-  /* Pricing section */
+  /* Visitor information section */
+  .visitor-info-columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .visitor-info-section h3 {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  /* Admission subsection */
   .price-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -249,7 +272,7 @@
     text-align: center;
   }
 
-  .price-card h3 {
+  .price-card h4 {
     margin: 0 0 0.5rem;
     font-size: 1rem;
     color: var(--primary-color);
@@ -325,15 +348,15 @@
     font-size: 0.9rem;
   }
 
-  /* Code of Conduct section */
-  .conduct-columns {
+  /* Code of Conduct subsection */
+  .conduct-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-bottom: 0.5rem;
   }
 
-  .do-column h3, .dont-column h3 {
+  .do-column h4, .dont-column h4 {
     color: var(--primary-color);
     font-size: 1.1rem;
     margin: 0 0 0.75rem;
@@ -482,7 +505,12 @@
       grid-template-columns: 1fr 2fr;
     }
 
-    .conduct-columns {
+    .visitor-info-columns {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .conduct-grid {
       grid-template-columns: 1fr 1fr;
     }
 
