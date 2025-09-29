@@ -22,17 +22,8 @@
 <p class="description">Navigate the Freedom Showcase venue with this interactive map.</p>
 
 <div class="map-container">
-  <!-- Placeholder for an actual map implementation -->
-  <div class="placeholder-map">
-    <div class="stadium-outline">
-      <div class="field">Field</div>
-      <div class="seating seating-left">Seating</div>
-      <div class="seating seating-right">Seating</div>
-      <div class="entrance-marker">Entrance</div>
-      <div class="concession-marker">Food</div>
-      <div class="restroom-marker">Restrooms</div>
-      <div class="parking-marker">Parking</div>
-    </div>
+  <div class="actual-map">
+    <img src="/images/map.png" alt="Freedom High School Stadium Map" />
     <div class="map-caption">
       <span class="map-icon">🗺️</span> Tap a location below for details
     </div>
@@ -85,93 +76,18 @@
     overflow: hidden;
   }
 
-  .placeholder-map {
-    background-color: #e2e8f0;
-    height: 200px;
-    border-radius: 4px;
+  .actual-map {
     position: relative;
     overflow: hidden;
-  }
-
-  /* Very simple placeholder map with basic elements */
-  .stadium-outline {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 70%;
-    background-color: #a0aec0;
-    border-radius: 100px;
-  }
-
-  .field {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 40%;
-    background-color: #48bb78;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: bold;
-  }
-
-  .seating {
-    position: absolute;
-    width: 20%;
-    height: 70%;
-    background-color: #718096;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 0.7rem;
-  }
-
-  .seating-left {
-    left: 10%;
-    top: 15%;
-  }
-
-  .seating-right {
-    right: 10%;
-    top: 15%;
-  }
-
-  .entrance-marker, .concession-marker, .restroom-marker, .parking-marker {
-    position: absolute;
-    font-size: 0.7rem;
-    background-color: #fff;
-    padding: 2px 6px;
     border-radius: 4px;
-    color: var(--primary-color);
+    max-height: 500px;
   }
 
-  .entrance-marker {
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .concession-marker {
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .restroom-marker {
-    top: 40%;
-    right: 5%;
-  }
-
-  .parking-marker {
-    bottom: 30%;
-    left: 5%;
+  .actual-map img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
   }
 
   .map-caption {
@@ -258,8 +174,8 @@
       font-size: 2rem;
     }
 
-    .placeholder-map {
-      height: 300px;
+    .actual-map {
+      max-height: 600px;
     }
 
     .poi-grid {
