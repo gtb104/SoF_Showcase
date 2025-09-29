@@ -41,13 +41,11 @@
 
 <div class="schedule-page">
   <h1>Event Schedule</h1>
-  <p class="event-date">{formattedDate} • {eventLocation || 'Freedom High School Stadium'}</p>
-
   <div class="timeline">
     {#each scheduleData as item}
       <h2>{item.group}</h2>
       {#each item.events as event}
-        <div class="timeline-item">
+        <div class="timeline-item {item.group.replace(' ', '-')}">
           <div class="timeline-time">{event.time}</div>
           <div class="timeline-content">
             {#if event.bandId && getProductionName(event.bandId)}
@@ -97,12 +95,6 @@
     padding-bottom: 0.5rem;
   }
 
-  .event-date {
-    color: #64748b;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
-
   /* Timeline styling */
   .timeline {
     display: flex;
@@ -123,10 +115,6 @@
 
   /* Add subtle interaction states for the timeline items with band links */
   /* Style for browsers that support :has() selector */
-  .timeline-item:has(.band-link) {
-    cursor: pointer;
-  }
-
   .timeline-item:has(.band-link):hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transform: translateY(-2px);
@@ -134,11 +122,6 @@
 
   .timeline-item:has(.band-link):active {
     transform: translateY(0);
-  }
-
-  /* Fallback for browsers that don't support :has() */
-  .timeline-item {
-    cursor: pointer;
   }
 
   .timeline-item:hover {
@@ -152,7 +135,28 @@
     top: 0;
     bottom: 0;
     width: 4px;
-    background-color: var(--primary-color);
+    background-color: grey;
+  }
+  .timeline-item.Group-1::before {
+    background-color: red;
+  }
+  .timeline-item.Group-2::before {
+    background-color: orange;
+  }
+  .timeline-item.Group-3::before {
+    background-color: yellow;
+  }
+  .timeline-item.Group-4::before {
+    background-color: green;
+  }
+  .timeline-item.Group-5::before {
+    background-color: blue;
+  }
+  .timeline-item.Group-6::before {
+    background-color: indigo;
+  }
+  .timeline-item.Exhibition::before {
+    background-color: violet;
   }
 
   .timeline-time {
@@ -198,12 +202,6 @@
   .band-link:hover, .band-link:focus {
     background-color: rgba(0, 52, 89, 0.05); /* Light version of primary color */
     border-radius: 4px;
-  }
-
-  /* Touch effect feedback for mobile */
-  .band-link:active {
-    background-color: rgba(0, 52, 89, 0.1); /* Slightly darker for active state */
-    transform: scale(0.98);
   }
 
   .schedule-notes {
