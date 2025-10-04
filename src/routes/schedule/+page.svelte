@@ -113,17 +113,6 @@
     transition: all 0.2s ease-in-out;
   }
 
-  /* Add subtle interaction states for the timeline items with band links */
-  /* Style for browsers that support :has() selector */
-  .timeline-item:has(.band-link):hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transform: translateY(-2px);
-  }
-
-  .timeline-item:has(.band-link):active {
-    transform: translateY(0);
-  }
-
   .timeline-item:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
@@ -185,23 +174,7 @@
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
-    position: relative;
-    padding-right: 1.25rem;
-    display: inline-block;
-    border-bottom: 1px dashed var(--primary-color);
-  }
-
-  .band-link::after {
-    content: '›';
-    position: absolute;
-    right: 0.3rem;
-    transform: translateY(-20%);
-    font-size: 1.2rem;
-  }
-
-  .band-link:hover, .band-link:focus {
-    background-color: rgba(0, 52, 89, 0.05); /* Light version of primary color */
-    border-radius: 4px;
+    border-bottom: 1px dotted var(--primary-color);
   }
 
   .schedule-notes {
@@ -229,12 +202,6 @@
     .timeline-time {
       min-width: 100px;
       font-size: 1rem;
-    }
-
-    /* More subtle styling for desktop where hover states are available */
-    .band-link {
-      border-bottom: 1px dotted var(--primary-color);
-      padding-right: 1rem;
     }
   }
 </style>

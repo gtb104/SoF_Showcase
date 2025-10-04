@@ -151,7 +151,7 @@
 </section>
 
 <section class="card seniors-section">
-  <h2>Senior Class of {eventYear}</h2>
+  <h2>Senior Class of {eventYear + 1}</h2>
   <p class="senior-intro">We celebrate and honor the graduating seniors of the Spirit of Freedom Marching Band:</p>
   <div class="seniors-grid">
     {#each seniors as senior}

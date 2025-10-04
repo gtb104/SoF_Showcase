@@ -32,13 +32,13 @@
             </div>
           {/if}
           <div class="sponsor-info">
-            <h3>{sponsor.name}</h3>
-            {#if sponsor.description}
-              <p>{sponsor.description}</p>
-            {/if}
-            {#if sponsor.website}
-              <a href={sponsor.website} target="_blank" rel="noopener noreferrer" class="website-link">Visit Website</a>
-            {/if}
+            <h3>
+              {#if sponsor.url}
+                <a href={sponsor.url} target="_blank" rel="noopener noreferrer" class="website-link">{sponsor.name}</a>
+              {:else}
+                {sponsor.name}
+              {/if}
+            </h3>
           </div>
         </div>
       {/each}
@@ -131,7 +131,6 @@
   }
 
   .sponsor-card:hover, .sponsor-card:focus {
-    transform: translateY(-2px);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
 
@@ -170,21 +169,12 @@
     color: var(--primary-color);
   }
 
-  .sponsor-info p {
-    margin: 0 0 0.5rem;
-    font-size: 0.85rem;
-    color: #4a5568;
-  }
 
   .website-link {
     color: var(--primary-color);
-    text-decoration: none;
-    font-size: 0.8rem;
     font-weight: 500;
-  }
-
-  .website-link:hover, .website-link:focus {
-    text-decoration: underline;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--primary-color);
   }
 
   .sponsor-cta {

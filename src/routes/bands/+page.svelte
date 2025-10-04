@@ -23,7 +23,7 @@
         <img src={band.logoUrl} alt="{band.school} logo" />
       </div>
       <div class="band-info">
-        <h2>{band.name}</h2>
+        <h2><span>{band.name}</span></h2>
         <div class="band-meta">
           <span class="band-location">{band.location}</span>
           <span class="band-group">{band.groupNumber}</span>
@@ -95,7 +95,9 @@
     margin: 0 0 0.5rem;
     font-size: 1.1rem;
     color: var(--primary-color);
-    border: none;
+  }
+  .band-info h2 span {
+    border-bottom: 1px dotted var(--primary-color);
   }
 
   .band-meta {
