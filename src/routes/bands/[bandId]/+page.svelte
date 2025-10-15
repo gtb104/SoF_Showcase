@@ -1,5 +1,6 @@
 <script>
-  import { bandsStore, scheduleStore } from '$lib/stores/index.js';
+  import bandsStore from '$lib/stores/bands.js';
+  import scheduleStore from '$lib/stores/schedule.js';
 
   /** @type {import('./$types').PageData} */
   export let data;

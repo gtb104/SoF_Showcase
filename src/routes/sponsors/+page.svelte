@@ -1,5 +1,5 @@
 <script>
-  import { sponsorsStore } from '$lib/stores/index.js';
+  import sponsorsStore from '$lib/stores/sponsors.js';
 
   // Get sponsors data from the store
   let sponsors = [];

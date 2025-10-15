@@ -1,5 +1,7 @@
 <script>
-  import { scheduleStore, appState, bandsStore } from '$lib/stores/index.js';
+  import { appState } from '$lib/stores/index.js';
+  import bandsStore from '$lib/stores/bands.js';
+  import scheduleStore from '$lib/stores/schedule.js';
 
   let scheduleData = [];
   let eventDate;

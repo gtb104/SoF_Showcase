@@ -1,5 +1,5 @@
 <script>
-  import { concessionsStore } from '$lib/stores/index.js';
+  import concessionsStore from '$lib/stores/concessions.js';
 
   // Get concessions data from the store
   let foodCategories = [];

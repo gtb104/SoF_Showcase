@@ -1,4 +1,4 @@
-import { bandsStore } from '$lib/stores/index.js';
+import bandsStore from '$lib/stores/bands.js';
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {

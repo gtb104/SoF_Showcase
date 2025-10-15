@@ -1,9 +1,12 @@
 <script>
-  import { appState, adjudicatorsStore, seniorsStore, boostersStore } from '$lib/stores/index.js';
+  import { appState, boostersStore } from '$lib/stores/index.js';
+  import adjudicatorsStore from '$lib/stores/adjudicators.js';
+  import seniorsStore from '$lib/stores/seniors.js';
 
   // Get app data
   let eventDate = '';
   let eventYear = '';
+  let specialThanks;
   appState.subscribe(data => {
     if (data) {
       const dateFormatter = new Intl.DateTimeFormat('en-US', {
@@ -12,6 +15,7 @@
       });
       eventDate = dateFormatter.format(data.eventDate);
       eventYear = new Date(data.eventDate).getFullYear();
+      specialThanks = data.specialThanks;
     }
   });
 
@@ -30,8 +34,7 @@
   // Get boosters data
   let boosters = {
     executiveBoard: [],
-    showcaseCoordinators: [],
-    specialThanks: ''
+    showcaseCoordinators: []
   };
   boostersStore.subscribe(data => {
     boosters = data;
@@ -183,10 +186,12 @@
     </div>
   </div>
 
-  <div class="special-thanks">
-    <h3>Special Thanks</h3>
-    <p>Thanks to {boosters.specialThanks || "our sponsors"} for providing food for our hard-working volunteers!</p>
-  </div>
+  {#if specialThanks}
+    <div class="special-thanks">
+      <h3>Special Thanks</h3>
+      <p>{specialThanks}</p>
+    </div>
+  {/if}
 </section>
 
 <style>
