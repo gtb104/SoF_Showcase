@@ -251,7 +251,7 @@ const bands = [
 		groupNumber: 'Exhibition',
 		logoUrl: '/images/schools/freedom.png',
 		productionName: 'In the present',
-		drumMajors: ['Abby Keenan', 'Joshua Choi', 'Bee Elliott'],
+		drumMajors: ['Abby Keenan', 'Joshua Choi', 'Bea Elliott'],
 		directors: ['Jonathan Schiffler'],
 		songs: [
 			{ title: 'Lunch with the King', composer: 'Thomas Newman' },
