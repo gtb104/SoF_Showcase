@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import { browser } from '$app/environment';
+	import { appState } from '$lib/stores/index.js';
 
   // Detect if we're on iOS for special handling
   let isIOS = false;
@@ -19,12 +20,16 @@
     { path: '/map', label: 'Map', icon: '🗺️' },
     { path: '/concessions', label: 'Food', icon: '🍔' }
   ];
+
+  // Event date
+  const eventDate = new Date(appState.eventDate);
+	const eventYear = eventDate.getFullYear();
 </script>
 
 <div class="app">
   <header>
     <div class="header-content">
-      <h1>{new Date().getFullYear()} Freedom Showcase</h1>
+      <h1>{eventYear} Freedom Showcase</h1>
     </div>
   </header>
 

@@ -1,11 +1,5 @@
 <script>
-  import sponsorsStore from '$lib/stores/sponsors.js';
-
-  // Get sponsors data from the store
-  let sponsors = [];
-  sponsorsStore.subscribe(data => {
-    sponsors = data;
-  });
+  import { sponsors, sponsorContact } from '$lib/stores/sponsors.js';
 </script>
 
 <svelte:head>
@@ -49,7 +43,7 @@
 <div class="sponsor-cta">
   <h2>Become a Sponsor</h2>
   <p>Interested in supporting the Freedom Showcase? Contact us to learn about sponsorship opportunities for next year's event.</p>
-  <a href="mailto:sponsors@freedomshowcase.example.com" class="cta-button">Contact Us</a>
+  <a href="mailto:{sponsorContact}" class="cta-button">Contact Us</a>
 </div>
 
 <style>

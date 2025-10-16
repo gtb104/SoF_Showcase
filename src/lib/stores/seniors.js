@@ -1,6 +1,4 @@
-import { writable } from 'svelte/store';
-
-const seniorsStore = writable([
+const seniors = [
   'Saachika Agashe',
   'Tito Aguirre',
   'Deeksha Bahl',
@@ -39,6 +37,6 @@ const seniorsStore = writable([
   'Emmi Wickersham',
   'Ben Wu',
   'Imogen Yabes'
-]);
+];
 
-export default seniorsStore;
+export { seniors };

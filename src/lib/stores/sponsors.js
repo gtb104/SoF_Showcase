@@ -1,6 +1,6 @@
-import { writable } from 'svelte/store';
+const sponsorContact = 'mariaryan1@verizon.net';
 
-const sponsorsStore = writable([
+const sponsors = [
   {
     level: 'Platinum',
     sponsors: [
@@ -167,6 +167,9 @@ const sponsorsStore = writable([
       }
     ]
   }
-]);
+];
 
-export default sponsorsStore;
+export {
+  sponsorContact,
+  sponsors
+};

@@ -1,8 +1,8 @@
-import bandsStore from '$lib/stores/bands.js';
+import { bands } from '$lib/stores/bands.js';
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
-  return {
-    bandId: params.bandId
-  };
+	return {
+		bandId: params.bandId
+	};
 }
