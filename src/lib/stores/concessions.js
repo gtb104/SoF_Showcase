@@ -93,14 +93,8 @@ const concessions = {
 				{
 					name: 'Candy',
 					price: '2.00',
-					description: 'M&Ms (plain/peanut), Milky Way, Snickers, Skittles, Sour Patch, Twix',
+					description: 'Airheads, M&Ms (plain/peanut), Milky Way, Skittles, Snickers, Sour Patch, Twix',
 					icon: '🍬'
-				},
-				{
-					name: 'Airheads',
-					price: '2.00',
-					description: '3 pack',
-					icon: '🍭'
 				}
 			]
 		}

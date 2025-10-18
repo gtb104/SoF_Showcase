@@ -149,7 +149,7 @@ const schedule = [
 			},
 			{
 				time: '8:30 PM',
-				description: 'UVA Exhibition'
+				description: 'UVA Cavalier Marching Band'
 			}
 		]
 	},

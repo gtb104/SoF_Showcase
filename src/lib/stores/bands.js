@@ -2,14 +2,19 @@ const bands = [
 	{
 		id: 'albemarle',
 		school: 'Albemarle High School',
-		name: '',
-		location: '',
+		name: 'Marching Patriots',
+		location: 'Charlottesville, VA',
 		groupNumber: 'Group 4',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		logoUrl: '/images/schools/albemarle.png',
+		productionName: 'Phases of Artemis',
+		drumMajors: ['Nate Paul'],
+		directors: ['Andrew LaPrade'],
+		songs: [
+			{ title: 'Symphony No. 10', composer: 'Shostakovich' },
+			{ title: 'Vertigo', composer: 'Bernard Hermann' },
+			{ title: 'Themes based on Sensemaya', composer: 'Revueltas' },
+			{ title: 'Strange Humors', composer: 'John Mackey' }
+		]
 	},
 	{
 		id: 'clarkecounty',
@@ -18,58 +23,78 @@ const bands = [
 		location: 'Berryville, VA',
 		groupNumber: 'Group 2',
 		logoUrl: '/images/schools/clarkecounty.png',
-		productionName: 'Good vs Evil',
-		drumMajors: ['Roselyne Kutai'],
-		directors: ['Mark Curry'],
-		songs: [{ title: 'Angels and Demons', composer: 'Randall Standridge' }]
+		productionName: 'Breakout!',
+		drumMajors: ['Annaliese Pledgie'],
+		directors: ['Mark Curry', 'Averie Jackson'],
+		songs: [
+			{ title: 'Breakout!', composer: 'Randall Standridge' }
+		]
 	},
 	{
 		id: 'gainesville',
 		school: 'Gainesville High School',
-		name: '',
-		location: '',
+		name: 'Cardinal Marching Band',
+		location: 'Gainesville, VA',
 		groupNumber: 'Group 4',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		logoUrl: '/images/schools/gainesville.png',
+		productionName: 'Siege of the Sirens: The Final Voyage',
+		drumMajors: ['Aly Estenor'],
+		directors: ['Vince Bryk', 'Sarah Bryk'],
+		songs: [
+			{ title: 'Aquarium', composer: 'Camille Saint-Saëns' },
+			{ title: 'Wellerman', composer: 'Traditional Sea Shanty' },
+			{ title: 'Daughter of the Sea', composer: 'Unknown' },
+			{ title: 'Russian Sailor\'s Dance', composer: 'Reinhold Glière' }
+		]
 	},
 	{
 		id: 'glenvar',
 		school: 'Glenvar High School',
-		name: '',
-		location: '',
+		name: 'Sound of the Highlands Marching Band',
+		location: 'Salem, VA',
 		groupNumber: 'Group 3',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		logoUrl: '/images/schools/glenvar.png',
+		productionName: 'Wired',
+		drumMajors: ['Lauren Starkey'],
+		directors: ['Nicholas Alford'],
+		songs: [
+			{ title: 'Power Up', composer: 'Unknown' },
+			{ title: 'The Grid', composer: 'Unknown' },
+			{ title: 'Alternate Reality', composer: 'Unknown' },
+			{ title: 'Virus', composer: 'Unknown' }
+		]
 	},
 	{
 		id: 'hickory',
 		school: 'Hickory High School',
-		name: '',
-		location: '',
+		name: 'Marching Hawks',
+		location: 'Chesapeake, VA',
 		groupNumber: 'Group 6',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		logoUrl: '/images/schools/hickory.png',
+		productionName: 'Passport to Adventure',
+		drumMajors: ['Ashlyn Jones', 'Lucy Cigich', 'Savannah Emmert'],
+		directors: ['Yvonne Daye', 'Mitchell Reed'],
+		songs: [
+			{ title: 'Selections from around the world', composer: 'Various' }
+		]
 	},
 	{
 		id: 'jamesmadison',
 		school: 'James Madison High School',
-		name: '',
-		location: '',
+		name: 'Pride of Vienna',
+		location: 'Vienna, VA',
 		groupNumber: 'Group 6',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		logoUrl: '/images/schools/jamesmadison.png',
+		productionName: 'Out of the Blue',
+		drumMajors: ['Meghan Chang', 'Daniel Lee'],
+		directors: ['Michael Hackbarth'],
+		songs: [
+			{ title: 'Rhapsody in Blue', composer: 'George Gershwin' },
+			{ title: 'Truman Sleeps', composer: 'Philip Glass' },
+			{ title: 'Bluest Flame', composer: 'Selena Gomez' },
+			{ title: 'Hymn to a Blue Hour', composer: 'John Mackey' },
+			{ title: 'Blue Shades', composer: 'Frank Ticheli' }
+		]
 	},
 	{
 		id: 'johnchampe',
@@ -78,51 +103,59 @@ const bands = [
 		location: 'Aldie, VA',
 		groupNumber: 'Group 6',
 		logoUrl: '/images/schools/johnchampe.png',
-		productionName: 'The Abyss',
-		drumMajors: ['Ethan Kim', 'Jaime Kwon', 'Parneet Virk'],
+		productionName: 'Knight Shades',
+		drumMajors: ['Rithik Iyer', 'Jiya Patel', 'Alejandro Zayas-Rodriguez'],
 		directors: ['Adam Foreman', 'Jason Miller'],
 		songs: [
-			{ title: 'Making Water', composer: 'Gregson-Williams' },
-			{ title: "Fingal's Cave Overture", composer: 'Mendelssohn' },
-			{ title: 'Vertigo Prelude and Rooftop', composer: 'Herrman' },
-			{ title: 'Isengard Unleashed', composer: 'Shore' },
-			{ title: 'Finale from "They Abyss"', composer: 'Silvestri' }
+			{ title: 'Blinding Lights', composer: 'The Weeknd' },
+			{ title: 'Blue Shades', composer: 'Frank Ticheli' },
+			{ title: 'Sunglasses at Night', composer: 'Corey Hart' },
+			{ title: 'The Light Fantastic', composer: 'Paul Lovatt-Cooper' }
 		]
 	},
 	{
 		id: 'jrtucker',
 		school: 'JR Tucker High School',
-		name: '',
-		location: '',
-		groupNumber: 'Group 2',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		name: 'Marching Tigers',
+		location: 'Henrico, VA',
+		groupNumber: 'Group 3',
+		logoUrl: '/images/schools/jrtucker.png',
+		productionName: 'Renegades',
+		drumMajors: ['Harper Nishimoto', 'Samantha Sherlock'],
+		directors: ['Austin L. Frank'],
+		songs: [
+			{ title: 'Uprising', composer: 'Muse' },
+			{ title: 'Stand Up', composer: 'Cynthia Erivo' },
+			{ title: 'We\'re Not Gonna Take It', composer: 'Twisted Sister' }
+		]
 	},
 	{
 		id: 'liberty',
 		school: 'Liberty Christian Academy',
-		name: '',
-		location: '',
+		name: 'Marching Bulldogs',
+		location: 'Lynchburg, VA',
 		groupNumber: 'Group 2',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		logoUrl: '/images/schools/liberty.png',
+		productionName: 'Outback Odyssey',
+		drumMajors: ['Peyton Reyes'],
+		directors: ['Autumn Esquirell'],
+		songs: [
+			{ title: 'Theme from "Crocodile Dundee"', composer: 'Mark Thomas' },
+			{ title: 'Carnival of the Animals', composer: 'Camille Saint-Saëns' },
+			{ title: 'Crocodile Rock', composer: 'Elton John' },
+			{ title: 'Down Under', composer: 'Men at Work' }
+		]
 	},
 	{
 		id: 'loudounvalley',
 		school: 'Loudoun Valley High School',
-		name: '',
-		location: '',
+		name: 'Marching Vikings',
+		location: 'Purcellville, VA',
 		groupNumber: 'Group 2',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
+		logoUrl: '/images/schools/loudounvalley.png',
+		productionName: 'Wild, Wild Western Loudoun',
+		drumMajors: ['Matt Hile', 'Richie Ring'],
+		directors: ['Megan Stallings'],
 		songs: []
 	},
 	{
@@ -132,39 +165,50 @@ const bands = [
 		location: 'Manassas, VA',
 		groupNumber: 'Group 3',
 		logoUrl: '/images/schools/osbournpark.png',
-		productionName: 'Goodnight, My Angel',
-		drumMajors: ['Aiden Goto'],
+		productionName: 'The Mark We Leave',
+		drumMajors: ['Eden Adu-Mensah', 'Brianna Ramos'],
 		directors: ['Ashley Radabaugh'],
 		songs: [
-			{ title: 'Lullabye (Goodnight, My Angel)', composer: 'Billy Joel' },
-			{ title: 'Sweet Dreams', composer: 'Eurythmics' },
-			{ title: 'Symphonie Fantastique Mvt 5', composer: 'Berlioz' },
-			{ title: 'Among the Clouds', composer: 'Brian Balmages' }
+			{ title: 'Fame', composer: 'Irene Cara' },
+			{ title: 'Triumphant Fanfare', composer: 'Richard Saucedo' },
+			{ title: 'If I Had My Way', composer: 'Linda Eder' },
+			{ title: 'Beethoven\'s 9th Symphony', composer: 'Ludwig van Beethoven' }
 		]
 	},
 	{
 		id: 'potomacfalls',
 		school: 'Potomac Falls High School',
-		name: '',
-		location: '',
+		name: 'Marching Panthers',
+		location: 'Potomac Falls, VA',
 		groupNumber: 'Group 3',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		logoUrl: '/images/schools/potomacfalls.png',
+		productionName: 'Ascend',
+		drumMajors: ['Ellie VanderHeyden', 'Bryan Advincula'],
+		directors: ['Mahdi Lotfi'],
+		songs: [
+			{ title: 'Married Life (Up)', composer: 'Michael Giacchino' },
+			{ title: 'Rockeship!', composer: 'Unknown' },
+			{ title: 'Clair de Lune', composer: 'Claude Debussy' },
+			{ title: 'Theme from Interstellar', composer: 'Hans Zimmer' }
+		]
 	},
 	{
 		id: 'sherando',
 		school: 'Sherando High School',
-		name: '',
-		location: '',
+		name: 'Marching Warriors',
+		location: 'Stephens City, VA',
 		groupNumber: 'Group 6',
-		logoUrl: '',
-		productionName: '',
-		drumMajors: [],
-		directors: [],
-		songs: []
+		logoUrl: '/images/schools/sherando.png',
+		productionName: 'Transcend the Stone',
+		drumMajors: ['Josie Austin', 'Glyn Lystrup', 'Gerardo Trinidad-Membreno'],
+		directors: ['Tyler Ende'],
+		songs: [
+			{ title: 'The Bells of Notre Dame', composer: 'Alan Menken' },
+			{ title: 'Night on Bald Mountain', composer: 'Modest Mussorgsky' },
+			{ title: 'Heart of Stone', composer: 'Unknown' },
+			{ title: 'Baba Yaga', composer: 'Anatoly Liadov' },
+			{ title: 'Turn to Stone', composer: 'Electric Light Orchestra' }
+		]
 	},
 	{
 		id: 'spotswood',
@@ -173,30 +217,30 @@ const bands = [
 		location: 'Penn Laird, VA',
 		groupNumber: 'Group 1',
 		logoUrl: '/images/schools/spotswood.png',
-		productionName: 'Enter the Galaxies',
-		drumMajors: ['Danny Gass'],
-		directors: ['Sean Macoumber'],
+		productionName: 'Icarus',
+		drumMajors: ['Madison Vance', 'Paul Tobey', 'Jude Brooks', 'Sadra Keyvanfar', 'Callie Massey'],
+		directors: ['Sean Macomber'],
 		songs: [
-			{ title: 'Enter The Galaxies', composer: 'Paul Lovatt-Cooper' },
-			{ title: 'The Dark Side of the Moon', composer: 'Paul Lovatt-Cooper' }
+			{ title: 'Sogno di Volare', composer: 'Christopher Tin' },
+			{ title: 'Romantic Flight from How to Train Your Dragon', composer: 'John Powell' },
+			{ title: 'Dies Irae', composer: 'Giuseppe Verdi' }
 		]
 	},
 	{
 		id: 'tjhsst',
 		school: 'Thomas Jefferson HSST',
-		name: 'Marching Colonials',
+		name: 'Thomas Jefferson Marching Colonials',
 		location: 'Alexandria, VA',
 		groupNumber: 'Group 6',
 		logoUrl: '/images/schools/tjhsst.png',
-		productionName: 'Adventure is Out There',
-		drumMajors: ['Grace Bai', 'Hudson Keeler'],
+		productionName: 'Shadows in the Alleys of the City',
+		drumMajors: ['Arin Kim', 'Grace Bai'],
 		directors: ['Steve Ballard'],
 		songs: [
-			{ title: 'The Chairman Dances', composer: 'John Adams' },
-			{
-				title: 'Carl Goes Up, Memories Can Weigh You Down, and Stuff We Did',
-				composer: 'Michael Giacchino'
-			}
+			{ title: 'Children\'s Hour of Dream', composer: 'Charles Mingus' },
+			{ title: 'Theme from TV Show "Succession"', composer: 'Nicholas Britell' },
+			{ title: 'Big Four on the River', composer: 'James David' },
+			{ title: 'Metropolis 1927', composer: 'Peter Graham' }
 		]
 	},
 	{
@@ -206,13 +250,14 @@ const bands = [
 		location: 'Leesburg, VA',
 		groupNumber: 'Group 2',
 		logoUrl: '/images/schools/tuscarora.png',
-		productionName: 'Dreamscape',
-		drumMajors: ['Dexter Wilkinson'],
+		productionName: 'Common Sense',
+		drumMajors: ['Aidan Spessard'],
 		directors: ['McKenzie Durgin'],
 		songs: [
-			{ title: 'Lingus', composer: 'Snarky Puppy' },
-			{ title: 'The World is Getting Smaller', composer: 'Snarky Puppy' },
-			{ title: 'Fly Me to the Moon', composer: 'arr. Arboldea/Steel' }
+			{ title: 'Toxic', composer: 'Britney Spears' },
+			{ title: 'Adagio for Tron', composer: 'Daft Punk' },
+			{ title: 'BANG', composer: 'AJR' },
+			{ title: 'Close Encounters', composer: 'John Williams' }
 		]
 	},
 	{
@@ -222,13 +267,14 @@ const bands = [
 		location: 'Alexandria, VA',
 		groupNumber: 'Group 4',
 		logoUrl: '/images/schools/westpotomac.png',
-		productionName: 'Write Me A Show!',
-		drumMajors: ['Amaya Guess', 'Delia Scott'],
+		productionName: 'Rock The Ring!',
+		drumMajors: ['Colten Wright'],
 		directors: ['Joe Antonucci'],
 		songs: [
-			{ title: 'Original Music', composer: 'Unlisted' },
-			{ title: 'Hymn to a Blue Hour', composer: 'Unlisted' },
-			{ title: 'Eleanor Rigby', composer: 'Unlisted' }
+			{ title: 'Gonna Fly Now', composer: 'Bill Conti' },
+			{ title: 'Punch Out', composer: 'Unknown' },
+			{ title: 'We Will Rock You', composer: 'Queen' },
+			{ title: 'We Are The Champions', composer: 'Queen' }
 		]
 	},
 	{
@@ -238,10 +284,15 @@ const bands = [
 		location: 'Arlington, VA',
 		groupNumber: 'Group 3',
 		logoUrl: '/images/schools/yorktown.png',
-		productionName: 'Let it Be',
-		drumMajors: ['Claire Huskey'],
+		productionName: 'One',
+		drumMajors: ['Liem Nguyen'],
 		directors: ['Joseph Witkowski'],
-		songs: [{ title: 'Let it Be and other music inspired by The Beatles', composer: 'The Beatles' }]
+		songs: [
+			{ title: 'First Suite in E-flat for Military band', composer: 'Gustav Holst' },
+			{ title: 'One', composer: 'U2' },
+			{ title: 'One', composer: 'Three Dog Night' },
+			{ title: 'One', composer: 'Metallica' }
+		]
 	},
 	{
 		id: 'freedom',
@@ -250,14 +301,13 @@ const bands = [
 		location: 'South Riding, VA',
 		groupNumber: 'Exhibition',
 		logoUrl: '/images/schools/freedom.png',
-		productionName: 'In the present',
-		drumMajors: ['Abby Keenan', 'Joshua Choi', 'Bea Elliott'],
+		productionName: 'In the Present',
+		drumMajors: ['Abby Keenan', 'Josh Choi', 'Bea Elliot'],
 		directors: ['Jonathan Schiffler'],
 		songs: [
-			{ title: 'Lunch with the King', composer: 'Thomas Newman' },
-			{ title: 'In Paradisum', composer: 'Frank Peterson and Sarah Brightman' },
-			{ title: 'Road to Chicago', composer: 'Thomas Newman' },
-			{ title: 'Original music', composer: 'William Pitts' }
+			{ title: 'Right Now', composer: 'Van Halen' },
+			{ title: 'Simple Gifts', composer: 'Traditional' },
+			{ title: 'Deciduous', composer: 'Viet Cuong' }
 		]
 	}
 ];
