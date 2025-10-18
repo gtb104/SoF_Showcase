@@ -9,7 +9,6 @@ const urlsToCache = [
 	'/sponsors',
 	'/map',
 	'/concessions',
-	'/*.css',
 	'/manifest.json'
 	// Add more assets to cache as needed
 ];
