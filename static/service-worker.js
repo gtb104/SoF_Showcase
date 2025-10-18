@@ -1,5 +1,6 @@
 // Service Worker for Freedom Showcase PWA
-const VERSION = 'v1::';
+// Make sure you update the VERSION if you make any updates!
+const VERSION = 'v2::';
 const NAME = 'freedom-showcase';
 const CACHE_NAME = `${VERSION}${NAME}`;
 const urlsToCache = [
@@ -9,7 +10,9 @@ const urlsToCache = [
 	'/sponsors',
 	'/map',
 	'/concessions',
-	'/manifest.json'
+	'/manifest.json',
+	'/icons/eagle192.png',
+	'/icons/eagle512.png'
 	// Add more assets to cache as needed
 ];
 
