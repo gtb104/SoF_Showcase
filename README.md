@@ -8,7 +8,7 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 - **Progressive Web App**: Installable on devices with offline capabilities
 - **Event Schedule**: Complete timeline of performances and activities
 - **Band Information**: Details about each participating band
-- **Interactive Map**: Navigate the venue with points of interest
+- **Map**: The venue with points of interest
 - **Concessions Menu**: Food and beverage options with pricing
 - **Sponsors Page**: Recognition of event sponsors
 
@@ -27,7 +27,8 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 │   ├── routes/             # SvelteKit routes (pages)
 │   │   ├── +page.svelte    # Home page
 │   │   ├── schedule/       # Schedule page
-│   │   ├── bands/          # Bands listing and detail pages
+│   │   ├── bands/          # Bands listing
+│   │   │   └──[bandid]     # Band detail page
 │   │   ├── map/            # Venue map
 │   │   ├── concessions/    # Food and beverage information
 │   │   └── sponsors/       # Sponsors recognition
@@ -36,6 +37,7 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 │       └── stores/         # Svelte stores for state management
 ├── static/                 # Static assets
 │   ├── icons/              # PWA icons
+│   ├── images/             # School and sponsor icons
 │   ├── manifest.json       # PWA manifest
 │   └── service-worker.js   # Service worker for offline capabilities
 └── vercel.json             # Vercel deployment configuration
@@ -55,18 +57,13 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
    npm install
    ```
 
-A typical workflow would be:
-
-- During development: Run `npm run dev` to work with live reloading
-- When ready to deploy: Run `npm run build` to create optimized production files
-- Before deploying: Run `npm run preview` to test the production build locally
-- Deploy to vercel
+A typical workflow would be to run `npm run dev` while editing files so you can work with live reloading. Run `npm run preview` to test the production build locally.
 
 ## Deployment
 
 This project is configured for deployment on Vercel. You have two options for deploying to vercel.
 
-1. You can link the GitHub repo to vercel from vercel's web interface. When you do this, any time you push changes to GitHub, vercel will redeploy those assets.
+1. You can link the GitHub repo to vercel from vercel's web interface. When you do this, any time you push changes to GitHub, vercel will redeploy those assets. This is the current configuration.
 2. You can deploy directly from the commandline. After you've logged into vercel, `vercel login`, run the following two commands:
 
 ```bash
