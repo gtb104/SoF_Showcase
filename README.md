@@ -25,6 +25,7 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 ├── src/
 │   ├── app.html            # Main HTML template
 │   ├── routes/             # SvelteKit routes (pages)
+│   │   ├── +layout.svelte  # App shell - defines common layout for all pages
 │   │   ├── +page.svelte    # Home page
 │   │   ├── schedule/       # Schedule page
 │   │   ├── bands/          # Bands listing
@@ -33,8 +34,7 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 │   │   ├── concessions/    # Food and beverage information
 │   │   └── sponsors/       # Sponsors recognition
 │   └── lib/                # Shared libraries
-│       ├── components/     # Reusable Svelte components
-│       └── stores/         # Svelte stores for state management
+│       └── stores/         # Data files
 ├── static/                 # Static assets
 │   ├── icons/              # PWA icons
 │   ├── images/             # School and sponsor icons
@@ -42,6 +42,32 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 │   └── service-worker.js   # Service worker for offline capabilities
 └── vercel.json             # Vercel deployment configuration
 ```
+
+## Updating Data
+
+This application is data-driven, with all event-specific content stored in data files within the `lib/stores` directory. For future events, you should only need to update these data files rather than modifying the application code.
+
+The following data files can be updated annually:
+
+- `src/lib/stores/bands.js` - Information about participating bands
+- `src/lib/stores/schedule.js` - Event timeline and performance schedule
+- `src/lib/stores/concessions.js` - Food and beverage options with pricing
+- `src/lib/stores/sponsors.js` - Sponsor information and logos
+- `src/lib/stores/eventInfo.js` - General event details (date, location, etc.)
+
+In addition to updating the data files, you may need to add new images for participating schools or sponsors.
+
+- `static/images/schools/` - School logos. Use the school's ID as the filename (e.g., `freedom.png`)
+- `static/images/sponsors/` - Sponsor logos. Use the sponsor's ID as the filename (e.g., `sponsor-name.png`)
+
+To update the data files in future years:
+
+1. Edit the appropriate store files with the new information
+2. Add or replace school and sponsor images in their respective directories
+3. Test the changes locally using `npm run dev`
+4. Deploy the updated application
+
+This approach allows for easy annual updates without requiring changes to the underlying application structure or components.
 
 ## Developing
 
@@ -51,8 +77,9 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 
 ### Local Development
 
-1. Clone the repository
-2. Install dependencies:
+1. Install requirements
+2. Clone or fork the repository
+3. Install dependencies:
    ```bash
    npm install
    ```
