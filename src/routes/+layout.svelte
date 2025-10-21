@@ -18,7 +18,7 @@
     { path: '/bands', label: 'Bands', icon: '🎵' },
     { path: '/sponsors', label: 'Sponsors', icon: '💰' },
     { path: '/map', label: 'Map', icon: '🗺️' },
-    { path: '/concessions', label: 'Food', icon: '🍔' }
+    { path: '/concessions', label: 'Food', icon: '🍽️' }
   ];
 
   // Event date
