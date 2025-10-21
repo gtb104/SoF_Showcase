@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6.0.0
         with:
-          node-version: '24' # Specify the Node.js version
+          node-version: '22' # Specify the Node.js version
 
       - name: Install dependencies
         run: npm install # Install project dependencies
