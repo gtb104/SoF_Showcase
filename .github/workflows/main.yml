@@ -1,9 +1,10 @@
 name: Build SvelteKit App
 
 on:
-  push:
-    branches:
-      - main # Trigger on pushes to the main branch
+  member: # was push
+    - gtb104
+    # branches:
+    #   - main # Trigger on pushes to the main branch
 
 jobs:
   build:
