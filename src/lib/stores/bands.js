@@ -65,20 +65,6 @@ const bands = [
 		]
 	},
 	{
-		id: 'hickory',
-		school: 'Hickory High School',
-		name: 'Marching Hawks',
-		location: 'Chesapeake, VA',
-		groupNumber: 'Group 6',
-		logoUrl: '/images/schools/hickory.png',
-		productionName: 'Passport to Adventure',
-		drumMajors: ['Ashlyn Jones', 'Lucy Cigich', 'Savannah Emmert'],
-		directors: ['Yvonne Daye', 'Mitchell Reed'],
-		songs: [
-			{ title: 'Selections from around the world', composer: 'Various' }
-		]
-	},
-	{
 		id: 'jamesmadison',
 		school: 'James Madison High School',
 		name: 'Pride of Vienna',
@@ -157,6 +143,26 @@ const bands = [
 		drumMajors: ['Matt Hile', 'Richie Ring'],
 		directors: ['Megan Stallings'],
 		songs: []
+	},
+	{
+		id: 'northstafford',
+		school: 'North Stafford School',
+		name: 'Big Blue Marching Band',
+		location: 'Stafford, VA',
+		groupNumber: 'Group 5',
+		logoUrl: '/images/schools/northstafford.png',
+		productionName: 'The Circle of Life',
+		drumMajors: ['Joseph Maybo'],
+		directors: ['Chris Mallory'],
+		songs: [
+			{ title: 'Full Circle', composer: 'Carol Brittan' },
+			{ title: 'This Land', composer: 'Hans Zimmer' },
+			{ title: 'Puma', composer: 'Karl Lundeberg' },
+			{ title: '557', composer: 'Pat Metheny' },
+			{ title: 'Circle of Life', composer: 'Elton John' },
+			{ title: 'I Just Can\'t Wait to be King', composer: 'Elton John' },
+			{ title: 'The First Circle', composer: 'Pat Metheny' }
+		]
 	},
 	{
 		id: 'osbournpark',
