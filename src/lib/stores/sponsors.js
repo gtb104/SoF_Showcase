@@ -167,7 +167,4 @@ const sponsors = [
 	}
 ];
 
-export {
-	sponsorContact,
-	sponsors
-};
+export { sponsorContact, sponsors };

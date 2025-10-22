@@ -26,9 +26,7 @@ const bands = [
 		productionName: 'Breakout!',
 		drumMajors: ['Annaliese Pledgie'],
 		directors: ['Mark Curry', 'Averie Jackson'],
-		songs: [
-			{ title: 'Breakout!', composer: 'Randall Standridge' }
-		]
+		songs: [{ title: 'Breakout!', composer: 'Randall Standridge' }]
 	},
 	{
 		id: 'gainesville',
@@ -44,7 +42,7 @@ const bands = [
 			{ title: 'Aquarium', composer: 'Camille Saint-Saëns' },
 			{ title: 'Wellerman', composer: 'Traditional Sea Shanty' },
 			{ title: 'Daughter of the Sea', composer: 'Unknown' },
-			{ title: 'Russian Sailor\'s Dance', composer: 'Reinhold Glière' }
+			{ title: "Russian Sailor's Dance", composer: 'Reinhold Glière' }
 		]
 	},
 	{
@@ -112,7 +110,7 @@ const bands = [
 		songs: [
 			{ title: 'Uprising', composer: 'Muse' },
 			{ title: 'Stand Up', composer: 'Cynthia Erivo' },
-			{ title: 'We\'re Not Gonna Take It', composer: 'Twisted Sister' }
+			{ title: "We're Not Gonna Take It", composer: 'Twisted Sister' }
 		]
 	},
 	{
@@ -160,7 +158,7 @@ const bands = [
 			{ title: 'Puma', composer: 'Karl Lundeberg' },
 			{ title: '557', composer: 'Pat Metheny' },
 			{ title: 'Circle of Life', composer: 'Elton John' },
-			{ title: 'I Just Can\'t Wait to be King', composer: 'Elton John' },
+			{ title: "I Just Can't Wait to be King", composer: 'Elton John' },
 			{ title: 'The First Circle', composer: 'Pat Metheny' }
 		]
 	},
@@ -178,7 +176,7 @@ const bands = [
 			{ title: 'Fame', composer: 'Irene Cara' },
 			{ title: 'Triumphant Fanfare', composer: 'Richard Saucedo' },
 			{ title: 'If I Had My Way', composer: 'Linda Eder' },
-			{ title: 'Beethoven\'s 9th Symphony', composer: 'Ludwig van Beethoven' }
+			{ title: "Beethoven's 9th Symphony", composer: 'Ludwig van Beethoven' }
 		]
 	},
 	{
@@ -243,7 +241,7 @@ const bands = [
 		drumMajors: ['Arin Kim', 'Grace Bai'],
 		directors: ['Steve Ballard'],
 		songs: [
-			{ title: 'Children\'s Hour of Dream', composer: 'Charles Mingus' },
+			{ title: "Children's Hour of Dream", composer: 'Charles Mingus' },
 			{ title: 'Theme from TV Show "Succession"', composer: 'Nicholas Britell' },
 			{ title: 'Big Four on the River', composer: 'James David' },
 			{ title: 'Metropolis 1927', composer: 'Peter Graham' }

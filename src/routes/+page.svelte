@@ -45,8 +45,8 @@
 		in music, visual presentation, and overall performance.
 	</p>
 	<p>
-		We have {bands.length} bands competing today, and each performance is the result of countless hours of
-		planning, practice, and hard work.
+		We have {bands.length} bands competing today, and each performance is the result of countless hours
+		of planning, practice, and hard work.
 	</p>
 	<p>
 		None of this would be possible without support from our sponsors and other local businesses, the
