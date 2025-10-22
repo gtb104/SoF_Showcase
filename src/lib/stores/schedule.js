@@ -102,9 +102,19 @@ const schedule = [
 				time: '5:45 PM',
 				description: 'Albemarle HS',
 				bandId: 'albemarle'
-			},
+			}
+		]
+	},
+	{
+		group: 'Group 5',
+		events: [
 			{
 				time: '6:00 PM',
+				description: 'North Stafford HS',
+				bandId: 'northstafford'
+			},
+			{
+				time: '6:15 PM',
 				description: 'Dinner Break'
 			}
 		]
@@ -112,11 +122,6 @@ const schedule = [
 	{
 		group: 'Group 6',
 		events: [
-			{
-				time: '7:00 PM',
-				description: 'Hickory HS',
-				bandId: 'hickory'
-			},
 			{
 				time: '7:15 PM',
 				description: 'John Champe HS',
