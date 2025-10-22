@@ -82,7 +82,12 @@
 		<h2>Musical Selection</h2>
 		<ul class="song-list">
 			{#each band.songs as song}
-				<li><strong>{song.title}</strong> <span class="composer">by {song.composer}</span></li>
+				<li>
+					<strong>{song.title}</strong>
+					{#if song.composer}
+						<span class="composer">by {song.composer}</span>
+					{/if}
+				</li>
 			{/each}
 		</ul>
 	</div>

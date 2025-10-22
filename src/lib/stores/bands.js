@@ -41,7 +41,7 @@ const bands = [
 		songs: [
 			{ title: 'Aquarium', composer: 'Camille Saint-Saëns' },
 			{ title: 'Wellerman', composer: 'Traditional Sea Shanty' },
-			{ title: 'Daughter of the Sea', composer: 'Unknown' },
+			{ title: 'Daughter of the Sea' },
 			{ title: "Russian Sailor's Dance", composer: 'Reinhold Glière' }
 		]
 	},
@@ -56,10 +56,10 @@ const bands = [
 		drumMajors: ['Lauren Starkey'],
 		directors: ['Nicholas Alford'],
 		songs: [
-			{ title: 'Power Up', composer: 'Unknown' },
-			{ title: 'The Grid', composer: 'Unknown' },
-			{ title: 'Alternate Reality', composer: 'Unknown' },
-			{ title: 'Virus', composer: 'Unknown' }
+			{ title: 'Power Up' },
+			{ title: 'The Grid' },
+			{ title: 'Alternate Reality' },
+			{ title: 'Virus' }
 		]
 	},
 	{
@@ -191,7 +191,7 @@ const bands = [
 		directors: ['Mahdi Lotfi'],
 		songs: [
 			{ title: 'Married Life (Up)', composer: 'Michael Giacchino' },
-			{ title: 'Rockeship!', composer: 'Unknown' },
+			{ title: 'Rockeship!' },
 			{ title: 'Clair de Lune', composer: 'Claude Debussy' },
 			{ title: 'Theme from Interstellar', composer: 'Hans Zimmer' }
 		]
@@ -209,7 +209,7 @@ const bands = [
 		songs: [
 			{ title: 'The Bells of Notre Dame', composer: 'Alan Menken' },
 			{ title: 'Night on Bald Mountain', composer: 'Modest Mussorgsky' },
-			{ title: 'Heart of Stone', composer: 'Unknown' },
+			{ title: 'Heart of Stone' },
 			{ title: 'Baba Yaga', composer: 'Anatoly Liadov' },
 			{ title: 'Turn to Stone', composer: 'Electric Light Orchestra' }
 		]
@@ -222,7 +222,7 @@ const bands = [
 		groupNumber: 'Group 1',
 		logoUrl: '/images/schools/spotswood.png',
 		productionName: 'Icarus',
-		drumMajors: ['Madison Vance', 'Paul Tobey', 'Jude Brooks', 'Sadra Keyvanfar', 'Callie Massey'],
+		drumMajors: [],
 		directors: ['Sean Macomber'],
 		songs: [
 			{ title: 'Sogno di Volare', composer: 'Christopher Tin' },
@@ -276,7 +276,7 @@ const bands = [
 		directors: ['Joe Antonucci'],
 		songs: [
 			{ title: 'Gonna Fly Now', composer: 'Bill Conti' },
-			{ title: 'Punch Out', composer: 'Unknown' },
+			{ title: 'Punch Out' },
 			{ title: 'We Will Rock You', composer: 'Queen' },
 			{ title: 'We Are The Champions', composer: 'Queen' }
 		]
