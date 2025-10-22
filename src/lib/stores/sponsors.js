@@ -11,7 +11,7 @@ const sponsors = [
 			},
 			{
 				name: 'Target',
-				logo: '/images/sponsors/target.png',
+				logo: '/images/sponsors/target.webp',
 				url: 'http://target.com/sl/south-riding/2938'
 			}
 		]
@@ -26,17 +26,17 @@ const sponsors = [
 			},
 			{
 				name: 'Kreative Corp',
-				logo: '/images/sponsors/kreative.png',
+				logo: '/images/sponsors/kreative.webp',
 				url: 'https://kreativecorp.com/'
 			},
 			{
 				name: 'Reynolds Empower Homes Team',
-				logo: '/images/sponsors/empower-home.png',
+				logo: '/images/sponsors/empower-home.webp',
 				url: 'https://empowerhome-team.com/home/'
 			},
 			{
 				name: 'Stone Ridge Oral & Facial Surgery',
-				logo: '/images/sponsors/stone-ridge-surgery.png',
+				logo: '/images/sponsors/stone-ridge-surgery.webp',
 				url: 'https://stoneridgeoralsurgery.com/'
 			}
 		]
@@ -46,12 +46,12 @@ const sponsors = [
 		sponsors: [
 			{
 				name: 'Donna Chong, Realtor',
-				logo: '/images/sponsors/donna-chong.png',
+				logo: '/images/sponsors/donna-chong.webp',
 				url: 'https://www.facebook.com/Donnachongrealtor/'
 			},
 			{
 				name: 'NOVEC',
-				logo: '/images/sponsors/novec.png',
+				logo: '/images/sponsors/novec.webp',
 				url: 'https://www.novec.com/'
 			}
 		]
@@ -61,7 +61,7 @@ const sponsors = [
 		sponsors: [
 			{
 				name: 'C2 Education',
-				logo: '/images/sponsors/c2.png',
+				logo: '/images/sponsors/c2.webp',
 				url: 'https://www.c2educate.com/'
 			},
 			{
@@ -76,17 +76,17 @@ const sponsors = [
 			},
 			{
 				name: 'M. Gen Contracting',
-				logo: '/images/sponsors/m-gen.png',
+				logo: '/images/sponsors/m-gen.webp',
 				url: 'http://mgeneralcontracting.com/'
 			},
 			{
 				name: 'Manhattan Pizza',
-				logo: '/images/sponsors/manhattan-pizza.png',
+				logo: '/images/sponsors/manhattan-pizza.webp',
 				url: 'https://manhattanpizza.com/locations/south-riding/'
 			},
 			{
 				name: 'United Rentals',
-				logo: '/images/sponsors/united-rentals.png',
+				logo: '/images/sponsors/united-rentals.webp',
 				url: 'https://www.unitedrentals.com/'
 			}
 		]
@@ -96,12 +96,12 @@ const sponsors = [
 		sponsors: [
 			{
 				name: 'Kravitz Orthodontics',
-				logo: '/images/sponsors/kravitz-orthodontics.png',
+				logo: '/images/sponsors/kravitz-orthodontics.webp',
 				url: 'https://www.kravitzorthodontics.com/'
 			},
 			{
 				name: 'Platinum Exteriors, Inc.',
-				logo: '/images/sponsors/platinum-exteriors.png',
+				logo: '/images/sponsors/platinum-exteriors.webp',
 				url: 'https://platinumexteriors.com/'
 			},
 			{
@@ -111,7 +111,7 @@ const sponsors = [
 			},
 			{
 				name: 'South Riding Chiropractic',
-				logo: '/images/sponsors/south-riding-chiro.png',
+				logo: '/images/sponsors/south-riding-chiro.webp',
 				url: 'https://www.southridingchiropractic.com/'
 			}
 		]
@@ -121,7 +121,7 @@ const sponsors = [
 		sponsors: [
 			{
 				name: 'Philben Photography',
-				logo: '/images/sponsors/philben-photography.png',
+				logo: '/images/sponsors/philben-photography.webp',
 				url: 'https://www.flickr.com/photos/sphilben/albums/'
 			},
 			{
@@ -131,7 +131,7 @@ const sponsors = [
 			},
 			{
 				name: 'Bakery Bites',
-				logo: '/images/sponsors/my-bites-bakery.png',
+				logo: '/images/sponsors/my-bites-bakery.webp',
 				url: 'https://www.mybitesbakery.com/'
 			}
 		]
