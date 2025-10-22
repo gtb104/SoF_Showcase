@@ -8,21 +8,23 @@ const appState = {
 
 // Freedom HS Band Boosters
 const boosters = {
-  executiveBoard: [
-    { name: 'Jeff Kleinsmith', position: 'President' },
-    { name: 'Laura McGarry', position: 'VP Operations' },
-    { name: 'Peter Talton', position: 'VP Logistics' },
-    { name: 'Catalina Gomoloka', position: 'VP Colorguard' },
-    { name: 'Abe Al Saeed', position: 'VP Indoor Drumline' },
-    { name: 'James Gould', position: 'Treasurer' },
-    { name: 'Janelle Irrgang', position: 'Secretary' }
-  ],
-  showcaseCoordinators: [
-    'Jeff Kleinsmith', 'Mike Henry', 'Danielle Henry', 'Emily Kleinsmith',
-    'Becky Wilhelm', 'Janelle Irrgang', 'Abe Al Saeed', 'Kristina Norman',
-    'Jennifer Wood', 'Maria Ryan', 'Erin Sterling', 'Jay Herrera',
-    'Megan Jacoby', 'Greg Sheffler', 'Tracy Griffe', 'Gene Griffe', 'Steve Harding'
-  ]
+	showcaseCoordinators: [
+		'James Gould',
+		'Steve Harding',
+		'Jay Herrera',
+		'Janelle Irrgang',
+		'Megan Jacoby',
+		'Emily Kleinsmith',
+		'Jeff Kleinsmith',
+		'Laura McGarry',
+		'Carli Olivieri',
+		'Natalie Perez',
+		'Maria Ryan',
+		'Greg Sheffler',
+		'Erin Sterling',
+		'Peter Talton',
+		'Jennifer Wood'
+	]
 };
 
 export {
