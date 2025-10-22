@@ -5,7 +5,7 @@
 <h1>Event Map</h1>
 <div class="map-container">
 	<div class="actual-map">
-		<img src="/images/map.png" alt="Freedom High School Stadium Map" />
+		<img src="/images/map.webp" alt="Freedom High School Stadium Map" />
 	</div>
 </div>
 
