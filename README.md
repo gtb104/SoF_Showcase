@@ -52,7 +52,7 @@ The following data files can be updated annually:
 - `src/lib/stores/bands.js` - Information about participating bands
 - `src/lib/stores/schedule.js` - Event timeline and performance schedule
 - `src/lib/stores/concessions.js` - Food and beverage options with pricing
-- `src/lib/stores/sponsors.js` - Sponsor information and logos
+- `src/lib/stores/sponsors.js` - Sponsor information
 - `src/lib/stores/eventInfo.js` - General event details (date, location, etc.)
 
 In addition to updating the data files, you may need to add new images for participating schools or sponsors.
@@ -88,6 +88,14 @@ This approach allows for easy annual updates without requiring changes to the un
 A typical workflow would be to run `npm run dev` while editing files so you can work with live reloading. Run `npm run preview` to test the production build locally.
 
 ## Deployment
+
+When you've updated this project, you'll want to update the version number. There are two places to update.
+1. `package.json`
+2. `static/service-worker.js`
+
+Update the package JSON when you make major changes, add new feature, or fix a problem.
+
+Update the service worker when you have made changes and you want to invalidate the cache on the client. You'll most likely want to do this yearly, right before your final publish before showcase.
 
 This project is configured for deployment on Vercel. You have two options for deploying to vercel.
 
