@@ -6,7 +6,7 @@ const concessions = {
 				{
 					name: "Pizza/Hot Dog/Cup o'Noodles",
 					price: '7.00',
-					description: 'Includes an entree, a drink (soda or water), and chips',
+					description: 'Includes an entree, a drink (soda/water), and chips',
 					icon: '🍽️'
 				}
 			]
@@ -69,7 +69,7 @@ const concessions = {
 				},
 				{
 					name: 'Hot Tea',
-					price: '1.00',
+					price: '2.00',
 					description: 'Assorted varieties',
 					icon: '🍵'
 				},
@@ -87,14 +87,14 @@ const concessions = {
 				{
 					name: 'Nothing Bundt Cakes',
 					price: '7.00',
-					description: 'Fresh mini bundt cakes',
+					description: 'Mini bundt cakes: Red velvet, Chocolate chocolate chip, White chocolate raspberry, Lemon, Confetti',
 					icon: '🍰'
 				},
 				{
 					name: 'Candy',
 					price: '2.00',
 					description:
-						'Airheads, M&Ms (plain/peanut), Milky Way, Skittles, Snickers, Sour Patch, Twix',
+						'Assorted varieties: Airheads, M&Ms (plain/peanut), Milky Way, Skittles, Snickers, Sour Patch, Twix, Nerds Gummy Clusters (rainbow/very berry)',
 					icon: '🍬'
 				}
 			]
