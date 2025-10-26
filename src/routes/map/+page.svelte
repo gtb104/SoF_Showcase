@@ -28,7 +28,6 @@
 		position: relative;
 		border-radius: 4px;
 	}
-
 	.actual-map img {
 		width: 100%;
 		height: auto;

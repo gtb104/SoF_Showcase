@@ -60,10 +60,6 @@
 </div>
 
 <style>
-	.schedule-page {
-		padding-bottom: 2rem;
-	}
-
 	h1 {
 		color: var(--primary-color);
 		font-size: 1.75rem;
@@ -78,7 +74,6 @@
 		padding-bottom: 0.5rem;
 	}
 
-	/* Timeline styling */
 	.timeline {
 		display: flex;
 		flex-direction: column;
@@ -95,11 +90,9 @@
 		overflow: hidden;
 		transition: all 0.2s ease-in-out;
 	}
-
 	.timeline-item:hover {
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	}
-
 	.timeline-item::before {
 		content: '';
 		position: absolute;
@@ -141,12 +134,10 @@
 	.timeline-content {
 		flex: 1;
 	}
-
 	.timeline-content h3 {
 		margin: 0 0 0.25rem;
 		font-size: 1rem;
 	}
-
 	.timeline-content p {
 		margin: 0;
 		font-size: 0.9rem;
@@ -166,12 +157,10 @@
 		padding: 1rem;
 		margin-top: 2rem;
 	}
-
 	.schedule-notes ul {
 		margin: 0;
 		padding-left: 1.5rem;
 	}
-
 	.schedule-notes li {
 		margin-bottom: 0.5rem;
 		font-size: 0.9rem;

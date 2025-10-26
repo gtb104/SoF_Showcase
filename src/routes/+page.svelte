@@ -28,7 +28,7 @@
 	/>
 </svelte:head>
 
-<section class="hero">
+<section class="card hero">
 	<h1>VMBC Freedom Showcase</h1>
 	<p class="tagline">
 		Presented by the Spirit of Freedom Marching Band and the Freedom High School Band Boosters
@@ -194,31 +194,36 @@
 </section>
 
 <style>
-	/* Hero section */
-	.hero {
-		text-align: center;
-		padding: 2rem 1rem;
-		background-color: var(--secondary-color);
-		color: black;
+	/* Base styles */
+	.card {
+		background-color: white;
 		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+		color: var(--text-color);
 		margin-bottom: 1.5rem;
-		position: relative;
-		overflow: hidden;
+		padding: 0.5rem 1.5rem 1.5rem;
 	}
 
-	h1 {
+	/* Hero section */
+	.hero {
+		background-color: var(--secondary-color);
+		color: var(--primary-color);
+		overflow: hidden;
+		padding: 2rem 1rem;
+		position: relative;
+		text-align: center;
+	}
+	.hero h1 {
 		font-size: 2rem;
 		margin: 0;
 		line-height: 1.2;
 	}
-
-	.tagline {
+	.hero .tagline {
 		font-size: 1.1rem;
 		opacity: 0.9;
 		margin: 0.5rem 0 1rem;
 	}
-
-	.show-date {
+	.hero .show-date {
 		display: inline-block;
 		background-color: rgba(255, 255, 255, 0.15);
 		padding: 0.25rem 1rem 0.5rem;
@@ -227,32 +232,21 @@
 		font-weight: 500;
 	}
 
-	/* Base styles */
-	.card {
-		background-color: white;
-		border-radius: 8px;
-		padding: 0.5rem 1.5rem;
-		margin-bottom: 1.5rem;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-	}
-
 	/* Info section */
-
 	.info-section p {
 		margin-bottom: 1rem;
 		line-height: 1.6;
 	}
+	.info-section p:last-child {
+		margin-bottom: 0;
+	}
 
 	/* Visitor information section */
-	/* Common grid layout shared by multiple sections */
-	.visitor-info-columns,
-	.boosters-content {
+	.visitor-info-columns {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 2rem;
 	}
-
-	/* Common section heading styles used throughout the page */
 	.visitor-info-section h3 {
 		color: var(--primary-color);
 		font-size: 1.25rem;
@@ -261,7 +255,6 @@
 		padding-bottom: 0.25rem;
 		border-bottom: 1px solid #e2e8f0;
 	}
-
 	/* Admission subsection */
 	.price-cards {
 		display: grid;
@@ -269,101 +262,33 @@
 		gap: 0.75rem;
 		margin-bottom: 1rem;
 	}
-
 	.price-card {
 		background-color: #f1f5f9;
 		border-radius: 8px;
 		padding: 1rem 0.5rem;
 		text-align: center;
 	}
-
 	.price-card h4 {
 		margin: 0 0 0.5rem;
 		font-size: 1rem;
 		color: var(--primary-color);
 	}
-
 	.price {
 		font-size: 1.5rem;
 		font-weight: bold;
 		color: var(--primary-color);
 	}
-
 	.price-note {
 		font-size: 0.8rem;
 		color: #64748b;
 		text-align: center;
 	}
-
-	/* Adjudicators section */
-	.adjudicators-grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 0.75rem;
-	}
-
-	.adjudicator-card {
-		background-color: #f1f5f9;
-		border-radius: 8px;
-		padding: 1rem;
-	}
-
-	.adjudicator-category {
-		font-size: 0.8rem;
-		color: #64748b;
-		margin-bottom: 0.25rem;
-	}
-
-	.adjudicator-name {
-		font-weight: 600;
-		color: var(--primary-color);
-	}
-
-	/* AirGrams section */
-	/* Common description text style shared by multiple sections */
-	.airgram-description,
-	.senior-intro {
-		font-size: 1rem;
-		margin-bottom: 1rem;
-		color: #4a5568;
-	}
-
-	.airgram-details {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem; /* Slightly smaller gap than other grid layouts */
-	}
-
-	.airgram-price h3,
-	.airgram-info h3 {
-		color: var(--primary-color);
-		font-size: 1.1rem;
-		margin: 0 0 0.5rem;
-	}
-
-	.airgram-price p {
-		margin: 0.25rem 0;
-		font-size: 0.95rem;
-	}
-
-	.airgram-info ul {
-		margin: 0.5rem 0 0;
-		padding-left: 1.25rem;
-	}
-
-	.airgram-info li {
-		margin-bottom: 0.5rem;
-		font-size: 0.9rem;
-	}
-
 	/* Code of Conduct subsection */
 	.conduct-grid {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 1.5rem;
-		margin-bottom: 0.5rem;
 	}
-
 	.do-column h4,
 	.dont-column h4 {
 		color: var(--primary-color);
@@ -372,73 +297,118 @@
 		padding-bottom: 0.25rem;
 		border-bottom: 1px solid #e2e8f0;
 	}
-
 	.conduct-list {
 		margin: 0;
 		padding-left: 1.5rem;
 	}
-
 	.conduct-list li {
 		margin-bottom: 0.5rem;
 		font-size: 0.9rem;
 	}
-
+	.conduct-list li:last-child {
+		margin-bottom: 0;
+	}
 	.do-list li::marker {
 		color: #38a169;
 		content: '✓ ';
 	}
-
 	.dont-list li::marker {
 		color: #e53e3e;
 		content: '✗ ';
 	}
 
-	/* Senior Class section */
-	.seniors-section {
-		margin-top: 2rem;
-		position: relative;
-		overflow: hidden;
-		border-top: 3px solid #ffd700;
-	}
-
-	.seniors-grid {
+	/* AirGrams section */
+	.airgram-details {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-		margin-top: 1rem;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
 	}
-
-	.senior-card {
-		background-color: #f5f5f5;
-		padding: 0.75rem;
-		border-radius: 6px;
-		text-align: center;
-		font-weight: 500;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-		transition: all 0.2s ease-in-out;
-		border-left: 3px solid #ffd700;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-height: 50px;
+	.airgram-price h3,
+	.airgram-info h3 {
+		color: var(--primary-color);
+		font-size: 1.1rem;
+		margin: 0 0 0.5rem;
+	}
+	.airgram-price p {
+		margin: 0.25rem 0;
 		font-size: 0.95rem;
 	}
+	.airgram-info ul {
+		margin: 0.5rem 0 0;
+		padding-left: 1.25rem;
+	}
+	.airgram-info li {
+		margin-bottom: 0.5rem;
+		font-size: 0.9rem;
+	}
+	.airgram-info li:last-child {
+		margin-bottom: 0;
+	}
 
+	/* Adjudicators section */
+	.adjudicators-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.75rem;
+	}
+	.adjudicator-card {
+		background-color: #f1f5f9;
+		border-radius: 8px;
+		padding: 1rem;
+	}
+	.adjudicator-category {
+		font-size: 0.8rem;
+		margin-bottom: 0.25rem;
+	}
+	.adjudicator-name {
+		font-weight: 600;
+		color: var(--primary-color);
+	}
+
+	/* Senior Class section */
+	.seniors-section {
+		border-top: 3px solid var(--secondary-color);
+		margin-top: 2rem;
+		overflow: hidden;
+		position: relative;
+	}
+	.seniors-grid {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: 1rem;
+	}
+	.senior-card {
+		align-items: center;
+		background-color: #f5f5f5;
+		border-left: 3px solid var(--secondary-color);
+		border-radius: 6px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+		display: flex;
+		font-size: 0.95rem;
+		font-weight: 500;
+		justify-content: center;
+		min-height: 50px;
+		padding: 0.75rem;
+		text-align: center;
+		transition: all 0.2s ease-in-out;
+	}
 	.senior-card:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		background-color: #f0f8ff;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		transform: translateY(-2px);
 	}
 
 	/* Band Boosters section */
 	.boosters-section {
 		margin-top: 2rem;
 	}
-
 	.boosters-content {
-		margin-bottom: 1.5rem; /* Additional styling specific to boosters-content */
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: 1fr;
+		margin-bottom: 1.5rem;
 	}
-
 	.executive-board h3,
 	.showcase-team h3,
 	.special-thanks h3,
@@ -450,39 +420,34 @@
 		padding-bottom: 0.25rem;
 		border-bottom: 1px solid #e2e8f0;
 	}
-
 	.board-list {
 		list-style: none;
 		padding: 0;
 		margin: 0;
 	}
-
 	.board-list li {
 		margin-bottom: 0.5rem;
 		font-size: 0.95rem;
 		padding: 0.25rem 0;
 		border-bottom: 1px dashed #edf2f7;
 	}
-
 	.coordinator-list {
 		font-size: 0.95rem;
 		line-height: 1.6;
 		color: #4a5568;
 	}
-
 	.coordinator-name {
 		white-space: nowrap;
 		display: inline-block;
 	}
-
 	.special-thanks {
 		margin-top: 1rem;
 	}
-
 	.special-thanks p {
 		font-size: 0.95rem;
 		font-style: italic;
 		color: #4a5568;
+		margin-bottom: 0px;
 	}
 
 	/* Responsive adjustments */
@@ -497,7 +462,7 @@
 			padding: 3rem 1rem;
 		}
 
-		h1 {
+		.hero h1 {
 			font-size: 2.5rem;
 		}
 
@@ -505,23 +470,18 @@
 			grid-template-columns: repeat(4, 1fr);
 		}
 
-		/* Grid layouts for desktop */
 		.airgram-details {
 			grid-template-columns: 1fr 2fr;
 		}
 
 		.visitor-info-columns,
 		.boosters-content {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: repeat(2, 1fr);
 			gap: 3rem;
 		}
 
-		.boosters-content {
-			align-items: start;
-		}
-
 		.conduct-grid {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: repeat(2, 1fr);
 		}
 
 		.seniors-grid {

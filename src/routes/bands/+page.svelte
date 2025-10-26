@@ -38,7 +38,6 @@
 	}
 
 	.description {
-		color: #64748b;
 		margin-bottom: 1.5rem;
 	}
 
@@ -75,7 +74,6 @@
 		align-items: center;
 		justify-content: center;
 	}
-
 	.band-logo img {
 		max-width: 80%;
 		max-height: 80%;
@@ -86,7 +84,6 @@
 		flex: 1;
 		padding: 1rem;
 	}
-
 	.band-info h2 {
 		margin: 0 0 0.5rem;
 		font-size: 1.1rem;

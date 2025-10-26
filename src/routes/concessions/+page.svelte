@@ -56,7 +56,6 @@
 	}
 
 	.description {
-		color: #64748b;
 		margin-bottom: 1rem;
 	}
 
@@ -71,7 +70,6 @@
 	.payment-info h3 {
 		margin: 0 0 0.5rem;
 		font-size: 0.9rem;
-		color: #4a5568;
 	}
 
 	.payment-methods {

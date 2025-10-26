@@ -64,7 +64,6 @@
 	}
 
 	.description {
-		color: #64748b;
 		margin-bottom: 1.5rem;
 	}
 
@@ -93,7 +92,7 @@
 	.tier-bronze,
 	.tier-band-supporters,
 	.tier-family-supporters {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: 1fr;
 	}
 
 	.sponsor-card {
@@ -102,9 +101,7 @@
 		border-radius: 8px;
 		padding: 1rem;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-		transition:
-			transform 0.2s,
-			box-shadow 0.2s;
+		transition: transform 0.2s, box-shadow 0.2s;
 		align-items: center;
 	}
 
@@ -147,7 +144,6 @@
 		border-radius: 8px;
 		overflow: hidden;
 	}
-
 	.sponsor-logo img {
 		max-width: 90%;
 		max-height: 90%;
@@ -164,7 +160,6 @@
 	.sponsor-info {
 		flex: 1;
 	}
-
 	.sponsor-info h3 {
 		margin: 0 0 0.25rem;
 		font-size: 1rem;
@@ -179,17 +174,15 @@
 	}
 
 	.sponsor-contact {
-		background-color: #f1f5f9;
+		background-color: white;
 		border-radius: 8px;
 		padding: 1.5rem;
 		text-align: center;
 		margin-top: 2rem;
 	}
-
 	.sponsor-contact h2 {
 		margin: 0 0 0.75rem;
 	}
-
 	.sponsor-contact p {
 		margin: 0 0 1.5rem;
 		line-height: 1.6;
@@ -205,7 +198,6 @@
 		font-weight: 500;
 		transition: background-color 0.2s;
 	}
-
 	.contact-btn:hover,
 	.contact-btn:focus {
 		background-color: #2a4365;

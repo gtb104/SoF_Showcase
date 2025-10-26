@@ -103,7 +103,6 @@
 	.back-nav {
 		margin-bottom: 1rem;
 	}
-
 	.back-nav .back-button {
 		color: var(--primary-color);
 		background: none;
@@ -133,7 +132,6 @@
 		border: 1px solid #e2e8f0;
 		padding: 4px;
 	}
-
 	.band-logo img {
 		max-width: 90%;
 		max-height: 90%;
@@ -200,7 +198,6 @@
 		margin-bottom: 1.5rem;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 	}
-
 	.band-card h2 {
 		font-size: 1.25rem;
 		margin: 0 0 1rem;
@@ -230,7 +227,6 @@
 		padding-left: 1.5rem;
 		list-style: circle;
 	}
-
 	.song-list li {
 		margin-bottom: 0.5rem;
 	}
