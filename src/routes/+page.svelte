@@ -49,11 +49,11 @@
 		of planning, practice, and hard work.
 	</p>
 	<p>
-		None of this would be possible without support from our sponsors and other local businesses, the
-		South Riding community, and Freedom High School's faculty and staff led by Band Director
-		<b>{appState.bandDirector}</b>
-		and Principal <b>{appState.principle}</b>. The FHS Band Boosters thanks every adult and student
-		volunteer for their tireless work and dedication to our kids and our band programs.
+		None of this would be possible without the support of our sponsors, local businesses,
+		the South Riding community, and Freedom High School’s faculty and staff, led by Band Director
+		<b>{appState.bandDirector}</b> and Principal <b>{appState.principle}</b>.
+		The FHS Band Boosters thanks every adult and student volunteer for their tireless work and dedication
+		to our kids and our band programs.
 	</p>
 </section>
 
@@ -126,7 +126,7 @@
 			<ul>
 				<li>Visit the AirGrams table near the entrance of the stadium</li>
 				<li>Place your order at least 60 minutes before your preferred timing</li>
-				<li>Payment accepted: Cash, Credit Cards, Venmo and PayPal</li>
+				<li>Payment accepted: Cash, Credit Cards, Venmo, and PayPal</li>
 			</ul>
 		</div>
 	</div>
