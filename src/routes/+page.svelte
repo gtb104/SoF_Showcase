@@ -33,7 +33,7 @@
 	<p class="tagline">
 		Presented by the Spirit of Freedom Marching Band and the Freedom High School Band Boosters
 	</p>
-	<p class="countdown">{formattedDate}<sup>{dateSuffix(eventDay)}</sup></p>
+	<p class="show-date">{formattedDate}<sup>{dateSuffix(eventDay)}</sup></p>
 </section>
 
 <section class="card info-section">
@@ -218,10 +218,10 @@
 		margin: 0.5rem 0 1rem;
 	}
 
-	.countdown {
+	.show-date {
 		display: inline-block;
 		background-color: rgba(255, 255, 255, 0.15);
-		padding: 0.5rem 1rem;
+		padding: 0.25rem 1rem 0.5rem;
 		border-radius: 20px;
 		font-size: 0.9rem;
 		font-weight: 500;
