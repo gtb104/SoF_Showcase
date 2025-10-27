@@ -3,7 +3,7 @@ const appState = {
 	eventDate: new Date('November 1, 2025'),
 	bandDirector: 'Jonathan Schiffler',
 	principle: 'Tania N. Brown',
-	specialThanks: 'Thanks to Manhattan Pizza for providing food for our hard-working volunteers!'
+	specialThanks: ''
 };
 
 // Freedom HS Band Boosters
