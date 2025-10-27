@@ -1,11 +1,11 @@
 const adjudicators = [
 	{
 		category: 'Ensemble Music',
-		name: 'Jon Merritt'
+		name: 'Carl Bly'
 	},
 	{
 		category: 'Individual Music',
-		name: 'Chris Martin'
+		name: 'Jon Merritt'
 	},
 	{
 		category: 'Ensemble Visual',
