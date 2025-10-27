@@ -143,8 +143,20 @@ const bands = [
 		songs: []
 	},
 	{
+		id: 'luray',
+		school: 'Luray High School',
+		name: 'Marching Bulldogs',
+		location: 'Luray, VA',
+		groupNumber: 'Group 1',
+		logoUrl: '/images/schools/luray.webp',
+		productionName: 'Radioactive',
+		drumMajors: [],
+		directors: ['Jake Schupner'],
+		songs: []
+	},
+	{
 		id: 'northstafford',
-		school: 'North Stafford School',
+		school: 'North Stafford High School',
 		name: 'Big Blue Marching Band',
 		location: 'Stafford, VA',
 		groupNumber: 'Group 5',
@@ -252,7 +264,7 @@ const bands = [
 		school: 'Tuscarora High School',
 		name: 'Marching Huskies',
 		location: 'Leesburg, VA',
-		groupNumber: 'Group 2',
+		groupNumber: 'Group 3',
 		logoUrl: '/images/schools/tuscarora.webp',
 		productionName: 'Common Sense',
 		drumMajors: ['Aidan Spessard'],

@@ -7,14 +7,19 @@ const schedule = [
 				description: 'Gates open'
 			},
 			{
-				time: '10:00 AM',
-				description: 'Opening ceremony'
+				time: '1:50 PM',
+				description: 'Announcements / National Anthem'
 			}
 		]
 	},
 	{
 		group: 'Group 1',
 		events: [
+			{
+				time: '2:00 PM',
+				description: 'Luray HS',
+				bandId: 'luray'
+			},
 			{
 				time: '2:15 PM',
 				description: 'Spotswood HS',
@@ -37,16 +42,11 @@ const schedule = [
 			},
 			{
 				time: '3:00 PM',
-				description: 'Tuscarora HS',
-				bandId: 'tuscarora'
-			},
-			{
-				time: '3:15 PM',
 				description: 'Loudoun Valley HS',
 				bandId: 'loudounvalley'
 			},
 			{
-				time: '3:30 PM',
+				time: '3:15 PM',
 				description: 'Break'
 			}
 		]
@@ -54,6 +54,11 @@ const schedule = [
 	{
 		group: 'Group 3',
 		events: [
+			{
+				time: '3:30 PM',
+				description: 'Tuscarora HS',
+				bandId: 'tuscarora'
+			},
 			{
 				time: '3:45 PM',
 				description: 'Osbourn Park HS',
