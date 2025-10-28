@@ -16,7 +16,7 @@
 				<img src={band.logoUrl} alt="{band.school} logo" />
 			</div>
 			<div class="band-info">
-				<h2><span>{band.name}</span></h2>
+				<h2><span>{band.school}</span></h2>
 				<div class="band-meta">
 					<span class="band-location">{band.location}</span>
 					<span class="band-group">{band.groupNumber}</span>
