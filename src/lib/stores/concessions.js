@@ -87,7 +87,7 @@ const concessions = {
 				{
 					name: 'Nothing Bundt Cakes',
 					price: '7.00',
-					description: 'Mini bundt cakes: Chocolate Chocolate Chip, Confetti, Lemon, Red Velvet, Oreo Cookies and Cream, Pumpkin Spice, White Chocolate Raspberry, Strawberries and Cream, & Gluten Free Chocolate Chip',
+					description: 'Mini bundt cakes: Chocolate Chocolate Chip, Confetti, Lemon, Red Velvet, Oreo Cookies and Cream, Pumpkin Spice, White Chocolate Raspberry, Strawberries and Cream, Gluten Free Chocolate Chip, and Gluten Free Lemon Raspberry',
 					icon: '🍰'
 				},
 				{
