@@ -7,7 +7,7 @@
 </svelte:head>
 
 <h1>Participating Bands</h1>
-<p class="description">Explore the bands performing at this year's Freedom Showcase.</p>
+<p class="description">Explore the bands performing at this year's Freedom Showcase. Click on a band to see program details.</p>
 
 <div class="bands-grid">
 	{#each bands as band}
