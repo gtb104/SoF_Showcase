@@ -1,6 +1,6 @@
 // Service Worker for Freedom Showcase PWA
 // Make sure you update the VERSION if you make any updates!
-const VERSION = 'v1.3.0::';
+const VERSION = 'v1.4.0::';
 const NAME = 'freedom-showcase';
 const CACHE_NAME = `${VERSION}${NAME}`;
 const urlsToCache = [
@@ -18,6 +18,7 @@ const urlsToCache = [
 
 // Install event - cache assets
 self.addEventListener('install', (event) => {
+	self.skipWaiting();
 	event.waitUntil(
 		caches.open(CACHE_NAME).then((cache) => {
 			return cache.addAll(urlsToCache);
