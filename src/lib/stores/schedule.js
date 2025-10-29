@@ -1,9 +1,9 @@
 const schedule = [
 	{
-		group: 'Morning',
+		group: 'Opening Ceremony',
 		events: [
 			{
-				time: '9:00 AM',
+				time: '1:30 PM',
 				description: 'Gates open'
 			},
 			{

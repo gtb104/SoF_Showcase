@@ -60,6 +60,7 @@ In addition to updating the data files, you may need to add new images for parti
 - `static/images/schools/` - School logos. Use the school's ID as the filename (e.g., `freedom.webp`)
 - `static/images/sponsors/` - Sponsor logos. Use the sponsor's ID as the filename (e.g., `sponsor-name.webp`)
 - Notice the images are in the `webp` format. If you take a jpg or png screenshot of a new school logo, use an [online](https://cloudconvert.com/webp-converter) or [commandline](https://developers.google.com/speed/webp/docs/using) converter.
+  - For commanline, use `cwebp` like so: `cwebp -q 80 -resize 0 64 liberty.png -o liberty.webp `
 
 To update the data files in future years:
 

@@ -1,4 +1,7 @@
 // Application state
+// There is a placeholder for a "special thanks" section at the bottom of the home page.
+// This is optional, and is generally reserved for the band boosters to give an extra
+// shout out.
 const appState = {
 	eventDate: new Date('November 1, 2025'),
 	bandDirector: 'Jonathan Schiffler',

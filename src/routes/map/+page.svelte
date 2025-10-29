@@ -4,8 +4,12 @@
 
 <h1>Event Map</h1>
 <div class="map-container">
-	<div class="actual-map">
+	<div class="map">
 		<img src="/images/map.webp" alt="Freedom High School Stadium Map" />
+	</div>
+	<hr/>
+	<div class="map">
+		<img src="/images/sitemap.webp" alt="Showcase Site Map" />
 	</div>
 </div>
 
@@ -24,11 +28,11 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 	}
 
-	.actual-map {
+	.map {
 		position: relative;
 		border-radius: 4px;
 	}
-	.actual-map img {
+	.map img {
 		width: 100%;
 		height: auto;
 		display: block;
