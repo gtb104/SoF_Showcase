@@ -3,14 +3,6 @@
 	import { browser } from '$app/environment';
 	import { appState } from '$lib/stores/index.js';
 
-	// Detect if we're on iOS for special handling
-	let isIOS = false;
-
-	// Handle iOS detection on client-side only
-	$: if (browser) {
-		isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-	}
-
 	// Navigation items
 	const navItems = [
 		{ path: '/', label: 'Home', icon: '🏠' },
@@ -37,7 +29,7 @@
 		<slot />
 	</main>
 
-	<nav class={isIOS ? 'ios-nav' : ''}>
+	<nav>
 		{#each navItems as item}
 			<a href={item.path} class={$page.url.pathname === item.path ? 'active' : ''}>
 				<span class="icon">{item.icon}</span>
@@ -129,10 +121,6 @@
 		height: var(--nav-height);
 		box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 		z-index: 10;
-	}
-
-	/* Special handling for iOS to account for bottom safe area */
-	.ios-nav {
 		padding-bottom: env(safe-area-inset-bottom, 0);
 	}
 
