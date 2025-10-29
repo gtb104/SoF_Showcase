@@ -125,7 +125,7 @@
 			<h3>How to Order</h3>
 			<ul>
 				<li>Visit the AirGrams table near the entrance of the stadium</li>
-				<li>Place your order at least 60 minutes before your preferred timing</li>
+				<li>Place your order at least 30 minutes before your preferred timing</li>
 				<li>Payment accepted: Cash, Credit Cards, Venmo, and PayPal</li>
 			</ul>
 		</div>
