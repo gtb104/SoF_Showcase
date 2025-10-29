@@ -119,10 +119,10 @@
 		background-color: white;
 		display: flex;
 		justify-content: space-around;
-		height: var(--nav-height);
+		height: calc(var(--nav-height) + env(safe-area-inset-bottom));
 		box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 		z-index: 10;
-		padding-bottom: env(safe-area-inset-bottom, 0);
+		padding-bottom: env(safe-area-inset-bottom);
 	}
 
 	nav a {
