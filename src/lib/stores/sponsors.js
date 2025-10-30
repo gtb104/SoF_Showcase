@@ -30,6 +30,11 @@ const sponsors = [
 				url: 'https://kreativecorp.com/'
 			},
 			{
+				name: 'Ourisman Toyota',
+				logo: '/images/sponsors/ourisman.webp',
+				url: 'https://www.ourismanchantillytoyota.com/'
+			},
+			{
 				name: 'Reynolds Empower Homes Team',
 				logo: '/images/sponsors/empower-home.webp',
 				url: 'https://empowerhome-team.com/home/'
