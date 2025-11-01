@@ -1,6 +1,6 @@
 // Service Worker for Freedom Showcase PWA
 // Make sure you update the VERSION if you make any updates!
-const VERSION = 'v1.6.0::';
+const VERSION = 'v1.6.1::';
 const NAME = 'freedom-showcase';
 const CACHE_NAME = `${VERSION}${NAME}`;
 const urlsToCache = [

@@ -28,7 +28,7 @@ const concessions = {
 				},
 				{
 					name: "Cup o'Noodles",
-					price: '3.00',
+					price: '4.00',
 					description: 'Instant noodles',
 					icon: '🍜'
 				},
@@ -43,6 +43,12 @@ const concessions = {
 					price: '2.00',
 					description: 'Assorted varieties',
 					icon: '🥔'
+				},
+				{
+					name: 'Oranges',
+					price: '1.00',
+					description: '2 Mandarin oranges',
+					icon: '🍊'
 				}
 			]
 		},
@@ -70,8 +76,14 @@ const concessions = {
 				{
 					name: 'Hot Tea',
 					price: '2.00',
-					description: 'Assorted varieties',
+					description: 'Regular black tea',
 					icon: '🍵'
+				},
+				{
+					name: 'Coffee',
+					price: '2.00',
+					description: 'Regular only',
+					icon: '☕️'
 				},
 				{
 					name: 'Hot Chocolate',
