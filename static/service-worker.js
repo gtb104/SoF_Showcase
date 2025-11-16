@@ -1,18 +1,19 @@
 // Service Worker for Freedom Showcase PWA
 // Make sure you update the VERSION if you make any updates!
-const VERSION = 'v1.6.1::';
+const VERSION = 'v2.0.0::';
 const NAME = 'freedom-showcase';
 const CACHE_NAME = `${VERSION}${NAME}`;
+const BASE_PATH = '/SoF_Showcase';
 const urlsToCache = [
-	'/',
-	'/schedule',
-	'/bands',
-	'/sponsors',
-	'/map',
-	'/concessions',
-	'/manifest.json',
-	'/icons/eagle192.png',
-	'/icons/eagle512.png'
+	`${BASE_PATH}/`,
+	`${BASE_PATH}/schedule`,
+	`${BASE_PATH}/bands`,
+	`${BASE_PATH}/sponsors`,
+	`${BASE_PATH}/map`,
+	`${BASE_PATH}/concessions`,
+	`${BASE_PATH}/manifest.json`,
+	`${BASE_PATH}/icons/eagle192.png`,
+	`${BASE_PATH}/icons/eagle512.png`
 	// Add more assets to cache as needed
 ];
 

@@ -16,7 +16,7 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 
 - **SvelteKit**: Framework for building high-performance web applications
 - **Progressive Web App (PWA)**: Service workers for offline capabilities
-- **Vercel Deployment**: Optimized for Vercel hosting platform
+- **GitHub Pages Deployment**: This app utilizes GitHub Pages as its hosting platform
 
 ## Project Structure
 
@@ -35,12 +35,11 @@ A Progressive Web App for the Freedom Showcase Marching Band Competition. This m
 │   │   └── sponsors/       # Sponsors recognition
 │   └── lib/                # Shared libraries
 │       └── stores/         # Data files
-├── static/                 # Static assets
-│   ├── icons/              # PWA icons
-│   ├── images/             # School and sponsor icons
-│   ├── manifest.json       # PWA manifest
-│   └── service-worker.js   # Service worker for offline capabilities
-└── vercel.json             # Vercel deployment configuration
+└── static/                 # Static assets
+    ├── icons/              # PWA icons
+    ├── images/             # School and sponsor icons
+    ├── manifest.json       # PWA manifest
+    └── service-worker.js   # Service worker for offline capabilities
 ```
 
 ## Updating Data
@@ -75,7 +74,6 @@ This approach allows for easy annual updates without requiring changes to the un
 
 ### Requirements
 - Node.js (v24)
-- Vercel CLI (v48)
 
 ### Local Development
 
@@ -98,15 +96,25 @@ Update the package JSON when you make major changes, add new feature, or fix a p
 
 Update the service worker when you have made changes and you want to invalidate the cache on the client. You'll most likely want to do this yearly, right before your final publish before showcase.
 
-This project is configured for deployment on Vercel. You have two options for deploying to vercel.
+### GitHub Pages Deployment
 
-1. You can link the GitHub repo to vercel from vercel's web interface. When you do this, any time you push changes to GitHub, vercel will redeploy those assets. This is the current configuration.
-2. You can deploy directly from the commandline. After you've logged into vercel, `vercel login`, run the following two commands:
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+**Automatic Deployment:**
+1. Any push to the `main` branch automatically triggers a build and deployment
+2. The GitHub Actions workflow (`.github/workflows/deploy.yml`) handles the entire process
+3. The site is published to `https://gtb104.github.io/SoF_Showcase/`
+
+**Manual Deployment:**
+If you need to deploy manually, you can also build locally and verify before pushing:
 
 ```bash
 npm run build
-vercel
 ```
+
+Then commit and push your changes to the `main` branch to trigger automatic deployment.
+
+**Note:** Make sure GitHub Pages is enabled in your repository settings (Settings → Pages → Source: GitHub Actions).
 
 ## License
 

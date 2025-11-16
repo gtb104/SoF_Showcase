@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 	import { browser } from '$app/environment';
 	import { appState } from '$lib/stores/index.js';
 
@@ -31,7 +32,7 @@
 
 	<nav>
 		{#each navItems as item}
-			<a href={item.path} class={$page.url.pathname === item.path ? 'active' : ''}>
+			<a href="{base}{item.path}" class={$page.url.pathname === `${base}${item.path}` ? 'active' : ''}>
 				<span class="icon">{item.icon}</span>
 				<span class="label">{item.label}</span>
 			</a>
