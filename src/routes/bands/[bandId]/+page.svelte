@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { bands } from '$lib/stores/bands.js';
 	import { schedule } from '$lib/stores/schedule.js';
 
@@ -38,7 +39,7 @@
 
 	<div class="band-header">
 		<div class="band-logo">
-			<img src={band.logoUrl} alt="{band.school} logo" />
+			<img src="{base}{band.logoUrl}" alt="{band.school} logo" />
 		</div>
 		<div class="band-title">
 			<h1>{band.name}</h1>
@@ -95,7 +96,7 @@
 	<div class="error-message">
 		<h1>Band Not Found</h1>
 		<p>Sorry, we couldn't find information for this band.</p>
-		<a href="/bands" class="button">View All Bands</a>
+		<a href="{base}/bands" class="button">View All Bands</a>
 	</div>
 {/if}
 

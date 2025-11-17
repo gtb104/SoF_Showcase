@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { appState } from '$lib/stores/index.js';
 	import { bands } from '$lib/stores/bands.js';
 	import { schedule } from '$lib/stores/schedule.js';
@@ -36,7 +37,7 @@
 						{/if}
 						<p>
 							{#if event.bandId}
-								<a href="/bands/{event.bandId}" class="band-link">
+								<a href="{base}/bands/{event.bandId}" class="band-link">
 									{event.description}
 								</a>
 							{:else}

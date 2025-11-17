@@ -1,3 +1,7 @@
+<script>
+	import { base } from '$app/paths';
+</script>
+
 <svelte:head>
 	<title>Event Map - Freedom Showcase</title>
 </svelte:head>
@@ -5,11 +9,11 @@
 <h1>Event Map</h1>
 <div class="map-container">
 	<div class="map">
-		<img src="/images/map.webp" alt="Freedom High School Stadium Map" />
+		<img src="{base}/images/map.webp" alt="Freedom High School Stadium Map" />
 	</div>
 	<hr/>
 	<div class="map">
-		<img src="/images/sitemap.webp" alt="Showcase Site Map" />
+		<img src="{base}/images/sitemap.webp" alt="Showcase Site Map" />
 	</div>
 </div>
 

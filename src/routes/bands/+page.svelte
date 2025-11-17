@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { bands } from '$lib/stores/bands.js';
 </script>
 
@@ -11,9 +12,9 @@
 
 <div class="bands-grid">
 	{#each bands as band}
-		<a href="/bands/{band.id}" class="band-card">
+		<a href="{base}/bands/{band.id}" class="band-card">
 			<div class="band-logo">
-				<img src={band.logoUrl} alt="{band.school} logo" />
+				<img src="{base}{band.logoUrl}" alt="{band.school} logo" />
 			</div>
 			<div class="band-info">
 				<h2><span>{band.school}</span></h2>

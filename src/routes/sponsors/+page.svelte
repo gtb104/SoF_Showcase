@@ -1,4 +1,5 @@
 <script>
+	import { base } from '$app/paths';
 	import { sponsors, sponsorContact } from '$lib/stores/sponsors.js';
 </script>
 
@@ -23,7 +24,7 @@
 				<div class="sponsor-card">
 					{#if sponsor.logo}
 						<div class="sponsor-logo">
-							<img src={sponsor.logo} alt="{sponsor.name} logo" />
+							<img src="{base}{sponsor.logo}" alt="{sponsor.name} logo" />
 						</div>
 					{:else}
 						<div class="sponsor-logo sponsor-placeholder">

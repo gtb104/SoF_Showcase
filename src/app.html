@@ -8,10 +8,10 @@
 			content="Official program guide for the Freedom Marching Band Showcase competition"
 		/>
 		<meta name="theme-color" content="#1a365d" />
-		<link rel="manifest" href="/manifest.json" />
-		<link rel="icon" href="/favicon.ico" sizes="any" />
-		<link rel="icon" href="/icons/eagle192.png" type="image/png" />
-		<link rel="apple-touch-icon" href="/icons/eagle192.png" />
+		<link rel="manifest" href="%sveltekit.assets%/manifest.json" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" sizes="any" />
+		<link rel="icon" href="%sveltekit.assets%/icons/eagle192.png" type="image/png" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/icons/eagle192.png" />
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
@@ -20,7 +20,7 @@
 			// Register Service Worker
 			if ('serviceWorker' in navigator) {
 				navigator.serviceWorker
-					.register('/service-worker.js')
+					.register('%sveltekit.assets%/service-worker.js')
 					.then((reg) => console.log('Service Worker registered'))
 					.catch((err) => console.log('Service Worker registration failed:', err));
 			}
